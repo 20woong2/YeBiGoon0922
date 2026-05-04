@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "StackAndShooter",
+			"Path": "..\\Source\\StackAndShooter.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "StackAndShooterEditor",
+			"Path": "..\\Source\\StackAndShooterEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

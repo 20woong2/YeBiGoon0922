@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\unreal\\yebigoon0922\\stackandshooter\\source\\stackandshooter\\variant_shooter\\weapons\\shooterpickup.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\unreal\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\x64\\stackandshootereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\unreal\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\stackandshooter\\definitions.stackandshooter.h",
+            "c:\\unreal\\yebigoon0922\\stackandshooter\\source\\stackandshooter\\variant_shooter\\weapons\\shooterpickup.h",
+            "c:\\unreal\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\unrealeditor\\inc\\stackandshooter\\uht\\shooterpickup.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\spherecomponent.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\spherecomponent.generated.h",
+            "c:\\unreal\\yebigoon0922\\stackandshooter\\source\\stackandshooter\\variant_shooter\\weapons\\shooterweaponholder.h",
+            "c:\\unreal\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\unrealeditor\\inc\\stackandshooter\\uht\\shooterweaponholder.generated.h",
+            "c:\\unreal\\yebigoon0922\\stackandshooter\\source\\stackandshooter\\variant_shooter\\weapons\\shooterweapon.h",
+            "c:\\unreal\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\unrealeditor\\inc\\stackandshooter\\uht\\shooterweapon.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
