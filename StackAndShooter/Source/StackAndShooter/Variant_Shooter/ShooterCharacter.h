@@ -30,7 +30,12 @@ class STACKANDSHOOTER_API AShooterCharacter : public AStackAndShooterCharacter, 
 	UPawnNoiseEmitterComponent* PawnNoiseEmitter;
 
 protected:
+	/** 게임 시작 시 지급할 기본 무기 클래스 */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Weapon")
+	TSubclassOf<class AShooterWeapon> DefaultWeaponClass;
 
+	/** 무기를 실제로 인벤토리에 추가하는 함수 (템플릿에 이미 있을 확률이 높음) */
+	void GrantDefaultWeapon();
 	/** Fire weapon input action */
 	UPROPERTY(EditAnywhere, Category ="Input")
 	UInputAction* FireAction;

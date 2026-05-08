@@ -25,14 +25,24 @@ AShooterCharacter::AShooterCharacter()
 void AShooterCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-
+	// 게임 시작 시 무기 지급 함수 호출
+	GrantDefaultWeapon();
 	// reset HP to max
 	CurrentHP = MaxHP;
 
 	// update the HUD
 	OnDamaged.Broadcast(1.0f);
 }
-
+void AShooterCharacter::GrantDefaultWeapon()
+{
+	// 우리가 에디터에서 고를 그 '총의 종류'가 설정되어 있다면
+	if (DefaultWeaponClass)
+	{
+		// 그냥 그 '종류(클래스)'만 함수에 쏙 넣어줍니다.
+		// 그러면 시스템이 알아서 총을 만들고 손에 쥐여줍니다.
+		this->AddWeaponClass(DefaultWeaponClass);
+	}
+}
 void AShooterCharacter::EndPlay(EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);

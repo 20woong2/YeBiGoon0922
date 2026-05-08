@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\user\\Documents\\YeBiGoon0922\\StackAndShooter\\Source\\StackAndShooter\\StackAndShooter.Build.cs",
-		"C:\\Users\\user\\Documents\\YeBiGoon0922\\StackAndShooter\\Source\\StackAndShooter.Target.cs",
-		"C:\\Users\\user\\Documents\\YeBiGoon0922\\StackAndShooter\\Source\\StackAndShooterEditor.Target.cs"
+		"C:\\Users\\20woo\\Documents\\GitHub\\YeBiGoon0922\\StackAndShooter\\Source\\StackAndShooter\\StackAndShooter.Build.cs",
+		"C:\\Users\\20woo\\Documents\\GitHub\\YeBiGoon0922\\StackAndShooter\\Source\\StackAndShooter.Target.cs",
+		"C:\\Users\\20woo\\Documents\\GitHub\\YeBiGoon0922\\StackAndShooter\\Source\\StackAndShooterEditor.Target.cs"
 	],
 	"EngineVersion": "5.6.1"
 }
