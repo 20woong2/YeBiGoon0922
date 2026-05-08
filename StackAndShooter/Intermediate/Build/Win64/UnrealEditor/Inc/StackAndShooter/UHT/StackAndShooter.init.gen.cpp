@@ -29,7 +29,7 @@ void EmptyLinkFunctionForGeneratedCodeStackAndShooter_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xC99BE489,
+				0x8DE88D30,
 				0x83E945AA,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -37,5 +37,5 @@ void EmptyLinkFunctionForGeneratedCodeStackAndShooter_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_StackAndShooter.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_StackAndShooter(Z_Construct_UPackage__Script_StackAndShooter, TEXT("/Script/StackAndShooter"), Z_Registration_Info_UPackage__Script_StackAndShooter, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xC99BE489, 0x83E945AA));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_StackAndShooter(Z_Construct_UPackage__Script_StackAndShooter, TEXT("/Script/StackAndShooter"), Z_Registration_Info_UPackage__Script_StackAndShooter, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x8DE88D30, 0x83E945AA));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

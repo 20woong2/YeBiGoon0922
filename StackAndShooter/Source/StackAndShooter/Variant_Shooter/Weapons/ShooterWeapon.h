@@ -34,6 +34,11 @@ class STACKANDSHOOTER_API AShooterWeapon : public AActor
 	USkeletalMeshComponent* ThirdPersonMesh;
 
 protected:
+	UFUNCTION(BlueprintImplementableEvent, Category = "Ammo")
+	void OnRequestReload();
+	/** 현재 재장전 중인지 여부 */
+	UPROPERTY(BlueprintReadWrite, Category = "Ammo")
+	bool bIsReloading = false;
 
 	/** Cast pointer to the weapon owner */
 	IShooterWeaponHolder* WeaponOwner;
@@ -43,10 +48,11 @@ protected:
 	TSubclassOf<AShooterProjectile> ProjectileClass;
 
 	/** Number of bullets in a magazine */
-	UPROPERTY(EditAnywhere, Category="Ammo", meta = (ClampMin = 0, ClampMax = 100))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ammo", meta = (ClampMin = 0, ClampMax = 100))
 	int32 MagazineSize = 10;
 
 	/** Number of bullets in the current magazine */
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Ammo")
 	int32 CurrentBullets = 0;
 	
 	/** Animation montage to play when firing this weapon */
@@ -89,6 +95,7 @@ protected:
 	float TimeOfLastShot = 0.0f;
 
 	/** If true, the weapon is currently firing */
+	UPROPERTY(BlueprintReadOnly, Category = "Firing")
 	bool bIsFiring = false;
 
 	/** Timer to handle full auto refiring */
@@ -137,6 +144,7 @@ public:
 	void DeactivateWeapon();
 
 	/** Start firing this weapon */
+	UFUNCTION(BlueprintCallable, Category = "Firing")
 	void StartFiring();
 
 	/** Stop firing this weapon */
@@ -173,7 +181,7 @@ public:
 	const TSubclassOf<UAnimInstance>& GetThirdPersonAnimInstanceClass() const;
 
 	/** Returns the magazine size */
-	int32 GetMagazineSize() const { return MagazineSize; };
+	int32 GetMagazineSize() const { return MagazineSize; }
 
 	/** Returns the current bullet count */
 	int32 GetBulletCount() const { return CurrentBullets; }

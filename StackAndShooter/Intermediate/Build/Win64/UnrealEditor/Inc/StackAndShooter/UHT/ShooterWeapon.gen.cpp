@@ -174,6 +174,71 @@ DEFINE_FUNCTION(AShooterWeapon::execOnOwnerDestroyed)
 }
 // ********** End Class AShooterWeapon Function OnOwnerDestroyed ***********************************
 
+// ********** Begin Class AShooterWeapon Function OnRequestReload **********************************
+static FName NAME_AShooterWeapon_OnRequestReload = FName(TEXT("OnRequestReload"));
+void AShooterWeapon::OnRequestReload()
+{
+	UFunction* Func = FindFunctionChecked(NAME_AShooterWeapon_OnRequestReload);
+	ProcessEvent(Func,NULL);
+}
+struct Z_Construct_UFunction_AShooterWeapon_OnRequestReload_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Ammo" },
+		{ "ModuleRelativePath", "Variant_Shooter/Weapons/ShooterWeapon.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AShooterWeapon_OnRequestReload_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AShooterWeapon, nullptr, "OnRequestReload", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterWeapon_OnRequestReload_Statics::Function_MetaDataParams), Z_Construct_UFunction_AShooterWeapon_OnRequestReload_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_AShooterWeapon_OnRequestReload()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShooterWeapon_OnRequestReload_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// ********** End Class AShooterWeapon Function OnRequestReload ************************************
+
+// ********** Begin Class AShooterWeapon Function StartFiring **************************************
+struct Z_Construct_UFunction_AShooterWeapon_StartFiring_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Firing" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Start firing this weapon */" },
+#endif
+		{ "ModuleRelativePath", "Variant_Shooter/Weapons/ShooterWeapon.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Start firing this weapon" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AShooterWeapon_StartFiring_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AShooterWeapon, nullptr, "StartFiring", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterWeapon_StartFiring_Statics::Function_MetaDataParams), Z_Construct_UFunction_AShooterWeapon_StartFiring_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_AShooterWeapon_StartFiring()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShooterWeapon_StartFiring_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AShooterWeapon::execStartFiring)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StartFiring();
+	P_NATIVE_END;
+}
+// ********** End Class AShooterWeapon Function StartFiring ****************************************
+
 // ********** Begin Class AShooterWeapon ***********************************************************
 void AShooterWeapon::StaticRegisterNativesAShooterWeapon()
 {
@@ -182,6 +247,7 @@ void AShooterWeapon::StaticRegisterNativesAShooterWeapon()
 		{ "GetFirstPersonMesh", &AShooterWeapon::execGetFirstPersonMesh },
 		{ "GetThirdPersonMesh", &AShooterWeapon::execGetThirdPersonMesh },
 		{ "OnOwnerDestroyed", &AShooterWeapon::execOnOwnerDestroyed },
+		{ "StartFiring", &AShooterWeapon::execStartFiring },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -251,6 +317,16 @@ struct Z_Construct_UClass_AShooterWeapon_Statics
 		{ "ToolTip", "Third person perspective mesh" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsReloading_MetaData[] = {
+		{ "Category", "Ammo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** \xed\x98\x84\xec\x9e\xac \xec\x9e\xac\xec\x9e\xa5\xec\xa0\x84 \xec\xa4\x91\xec\x9d\xb8\xec\xa7\x80 \xec\x97\xac\xeb\xb6\x80 */" },
+#endif
+		{ "ModuleRelativePath", "Variant_Shooter/Weapons/ShooterWeapon.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xed\x98\x84\xec\x9e\xac \xec\x9e\xac\xec\x9e\xa5\xec\xa0\x84 \xec\xa4\x91\xec\x9d\xb8\xec\xa7\x80 \xec\x97\xac\xeb\xb6\x80" },
+#endif
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ProjectileClass_MetaData[] = {
 		{ "Category", "Ammo" },
 #if !UE_BUILD_SHIPPING
@@ -271,6 +347,16 @@ struct Z_Construct_UClass_AShooterWeapon_Statics
 		{ "ModuleRelativePath", "Variant_Shooter/Weapons/ShooterWeapon.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Number of bullets in a magazine" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentBullets_MetaData[] = {
+		{ "Category", "Ammo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Number of bullets in the current magazine */" },
+#endif
+		{ "ModuleRelativePath", "Variant_Shooter/Weapons/ShooterWeapon.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Number of bullets in the current magazine" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_FiringMontage_MetaData[] = {
@@ -374,6 +460,16 @@ struct Z_Construct_UClass_AShooterWeapon_Statics
 #endif
 		{ "Units", "s" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsFiring_MetaData[] = {
+		{ "Category", "Firing" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** If true, the weapon is currently firing */" },
+#endif
+		{ "ModuleRelativePath", "Variant_Shooter/Weapons/ShooterWeapon.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "If true, the weapon is currently firing" },
+#endif
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ShotLoudness_MetaData[] = {
 		{ "Category", "Perception" },
 		{ "ClampMax", "100" },
@@ -412,8 +508,11 @@ struct Z_Construct_UClass_AShooterWeapon_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FirstPersonMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ThirdPersonMesh;
+	static void NewProp_bIsReloading_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsReloading;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_ProjectileClass;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_MagazineSize;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_CurrentBullets;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FiringMontage;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_FirstPersonAnimInstanceClass;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_ThirdPersonAnimInstanceClass;
@@ -424,6 +523,8 @@ struct Z_Construct_UClass_AShooterWeapon_Statics
 	static void NewProp_bFullAuto_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bFullAuto;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_RefireRate;
+	static void NewProp_bIsFiring_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsFiring;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ShotLoudness;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ShotNoiseRange;
 	static const UECodeGen_Private::FNamePropertyParams NewProp_ShotNoiseTag;
@@ -433,6 +534,8 @@ struct Z_Construct_UClass_AShooterWeapon_Statics
 		{ &Z_Construct_UFunction_AShooterWeapon_GetFirstPersonMesh, "GetFirstPersonMesh" }, // 1873604062
 		{ &Z_Construct_UFunction_AShooterWeapon_GetThirdPersonMesh, "GetThirdPersonMesh" }, // 1003614134
 		{ &Z_Construct_UFunction_AShooterWeapon_OnOwnerDestroyed, "OnOwnerDestroyed" }, // 3687695810
+		{ &Z_Construct_UFunction_AShooterWeapon_OnRequestReload, "OnRequestReload" }, // 1855124323
+		{ &Z_Construct_UFunction_AShooterWeapon_StartFiring, "StartFiring" }, // 1225186138
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -442,8 +545,14 @@ struct Z_Construct_UClass_AShooterWeapon_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_FirstPersonMesh = { "FirstPersonMesh", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterWeapon, FirstPersonMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FirstPersonMesh_MetaData), NewProp_FirstPersonMesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_ThirdPersonMesh = { "ThirdPersonMesh", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterWeapon, ThirdPersonMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ThirdPersonMesh_MetaData), NewProp_ThirdPersonMesh_MetaData) };
+void Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bIsReloading_SetBit(void* Obj)
+{
+	((AShooterWeapon*)Obj)->bIsReloading = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bIsReloading = { "bIsReloading", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AShooterWeapon), &Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bIsReloading_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsReloading_MetaData), NewProp_bIsReloading_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_ProjectileClass = { "ProjectileClass", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterWeapon, ProjectileClass), Z_Construct_UClass_UClass, Z_Construct_UClass_AShooterProjectile_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileClass_MetaData), NewProp_ProjectileClass_MetaData) };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_MagazineSize = { "MagazineSize", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterWeapon, MagazineSize), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MagazineSize_MetaData), NewProp_MagazineSize_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_MagazineSize = { "MagazineSize", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterWeapon, MagazineSize), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MagazineSize_MetaData), NewProp_MagazineSize_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_CurrentBullets = { "CurrentBullets", nullptr, (EPropertyFlags)0x0020080000020005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterWeapon, CurrentBullets), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentBullets_MetaData), NewProp_CurrentBullets_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_FiringMontage = { "FiringMontage", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterWeapon, FiringMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FiringMontage_MetaData), NewProp_FiringMontage_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_FirstPersonAnimInstanceClass = { "FirstPersonAnimInstanceClass", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterWeapon, FirstPersonAnimInstanceClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UAnimInstance_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FirstPersonAnimInstanceClass_MetaData), NewProp_FirstPersonAnimInstanceClass_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_ThirdPersonAnimInstanceClass = { "ThirdPersonAnimInstanceClass", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterWeapon, ThirdPersonAnimInstanceClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UAnimInstance_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ThirdPersonAnimInstanceClass_MetaData), NewProp_ThirdPersonAnimInstanceClass_MetaData) };
@@ -457,14 +566,21 @@ void Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bFullAuto_SetBit(void* O
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bFullAuto = { "bFullAuto", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AShooterWeapon), &Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bFullAuto_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bFullAuto_MetaData), NewProp_bFullAuto_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_RefireRate = { "RefireRate", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterWeapon, RefireRate), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RefireRate_MetaData), NewProp_RefireRate_MetaData) };
+void Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bIsFiring_SetBit(void* Obj)
+{
+	((AShooterWeapon*)Obj)->bIsFiring = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bIsFiring = { "bIsFiring", nullptr, (EPropertyFlags)0x0020080000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AShooterWeapon), &Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bIsFiring_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsFiring_MetaData), NewProp_bIsFiring_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_ShotLoudness = { "ShotLoudness", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterWeapon, ShotLoudness), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ShotLoudness_MetaData), NewProp_ShotLoudness_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_ShotNoiseRange = { "ShotNoiseRange", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterWeapon, ShotNoiseRange), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ShotNoiseRange_MetaData), NewProp_ShotNoiseRange_MetaData) };
 const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_ShotNoiseTag = { "ShotNoiseTag", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterWeapon, ShotNoiseTag), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ShotNoiseTag_MetaData), NewProp_ShotNoiseTag_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AShooterWeapon_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_FirstPersonMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_ThirdPersonMesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bIsReloading,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_ProjectileClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_MagazineSize,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_CurrentBullets,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_FiringMontage,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_FirstPersonAnimInstanceClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_ThirdPersonAnimInstanceClass,
@@ -474,6 +590,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AShooterW
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_MuzzleOffset,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bFullAuto,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_RefireRate,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bIsFiring,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_ShotLoudness,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_ShotNoiseRange,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_ShotNoiseTag,
@@ -515,10 +632,10 @@ AShooterWeapon::~AShooterWeapon() {}
 struct Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeapon_h__Script_StackAndShooter_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterWeapon, AShooterWeapon::StaticClass, TEXT("AShooterWeapon"), &Z_Registration_Info_UClass_AShooterWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterWeapon), 582155154U) },
+		{ Z_Construct_UClass_AShooterWeapon, AShooterWeapon::StaticClass, TEXT("AShooterWeapon"), &Z_Registration_Info_UClass_AShooterWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterWeapon), 3922107702U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeapon_h__Script_StackAndShooter_1629451538(TEXT("/Script/StackAndShooter"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeapon_h__Script_StackAndShooter_2624122568(TEXT("/Script/StackAndShooter"),
 	Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeapon_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeapon_h__Script_StackAndShooter_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

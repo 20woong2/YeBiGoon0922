@@ -32,6 +32,7 @@ STACKANDSHOOTER_API void FDamagedDelegate_DelegateWrapper(const FMulticastScript
 
 // ********** Begin Class AShooterCharacter ********************************************************
 #define FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execUpdateWeaponHUD); \
 	DECLARE_FUNCTION(execDoSwitchWeapon); \
 	DECLARE_FUNCTION(execDoStopFiring); \
 	DECLARE_FUNCTION(execDoStartFiring);

@@ -71,6 +71,7 @@ protected:
 	TArray<AShooterWeapon*> OwnedWeapons;
 
 	/** Weapon currently equipped and ready to shoot with */
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Weapons")
 	TObjectPtr<AShooterWeapon> CurrentWeapon;
 
 	UPROPERTY(EditAnywhere, Category ="Destruction", meta = (ClampMin = 0, ClampMax = 10, Units = "s"))
@@ -135,6 +136,7 @@ public:
 	virtual void AddWeaponRecoil(float Recoil) override;
 
 	/** Updates the weapon's HUD with the current ammo count */
+	UFUNCTION(BlueprintCallable, Category = "UI") // 이 줄을 추가!
 	virtual void UpdateWeaponHUD(int32 CurrentAmmo, int32 MagazineSize) override;
 
 	/** Calculates and returns the aim location for the weapon */

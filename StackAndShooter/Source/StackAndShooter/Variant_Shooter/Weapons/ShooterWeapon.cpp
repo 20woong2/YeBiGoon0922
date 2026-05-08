@@ -125,7 +125,13 @@ void AShooterWeapon::StopFiring()
 
 void AShooterWeapon::Fire()
 {
-	// ensure the player still wants to fire. They may have let go of the trigger
+	// 1. 장전 중인지 확인 (가장 먼저 체크해야 함!)
+	if (bIsReloading)
+	{
+		return;
+	}
+
+	// 2. 발사 시도 중인지 확인
 	if (!bIsFiring)
 	{
 		return;
@@ -179,13 +185,14 @@ void AShooterWeapon::FireProjectile(const FVector& TargetLocation)
 	// add recoil
 	WeaponOwner->AddWeaponRecoil(FiringRecoil);
 
-	// consume bullets
+	// 총알 감소
 	--CurrentBullets;
 
-	// if the clip is depleted, reload it
-	if (CurrentBullets <= 0)
+	// 총알이 0 이하로 내려가면 0으로 고정 (자동 장전 삭제)
+	if (CurrentBullets < 0)
 	{
-		CurrentBullets = MagazineSize;
+		CurrentBullets = 0;
+		OnRequestReload();
 	}
 
 	// update the weapon HUD

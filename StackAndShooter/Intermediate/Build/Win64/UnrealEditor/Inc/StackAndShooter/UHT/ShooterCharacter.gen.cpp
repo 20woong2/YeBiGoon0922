@@ -263,6 +263,60 @@ DEFINE_FUNCTION(AShooterCharacter::execDoSwitchWeapon)
 }
 // ********** End Class AShooterCharacter Function DoSwitchWeapon **********************************
 
+// ********** Begin Class AShooterCharacter Function UpdateWeaponHUD *******************************
+struct Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics
+{
+	struct ShooterCharacter_eventUpdateWeaponHUD_Parms
+	{
+		int32 CurrentAmmo;
+		int32 MagazineSize;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "UI" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Updates the weapon's HUD with the current ammo count */// \xec\x9d\xb4 \xec\xa4\x84\xec\x9d\x84 \xec\xb6\x94\xea\xb0\x80!\n" },
+#endif
+		{ "ModuleRelativePath", "Variant_Shooter/ShooterCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Updates the weapon's HUD with the current ammo count // \xec\x9d\xb4 \xec\xa4\x84\xec\x9d\x84 \xec\xb6\x94\xea\xb0\x80!" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_CurrentAmmo;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_MagazineSize;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics::NewProp_CurrentAmmo = { "CurrentAmmo", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ShooterCharacter_eventUpdateWeaponHUD_Parms, CurrentAmmo), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics::NewProp_MagazineSize = { "MagazineSize", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ShooterCharacter_eventUpdateWeaponHUD_Parms, MagazineSize), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics::NewProp_CurrentAmmo,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics::NewProp_MagazineSize,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AShooterCharacter, nullptr, "UpdateWeaponHUD", Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics::PropPointers), sizeof(Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics::ShooterCharacter_eventUpdateWeaponHUD_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics::Function_MetaDataParams), Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics::ShooterCharacter_eventUpdateWeaponHUD_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AShooterCharacter::execUpdateWeaponHUD)
+{
+	P_GET_PROPERTY(FIntProperty,Z_Param_CurrentAmmo);
+	P_GET_PROPERTY(FIntProperty,Z_Param_MagazineSize);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UpdateWeaponHUD(Z_Param_CurrentAmmo,Z_Param_MagazineSize);
+	P_NATIVE_END;
+}
+// ********** End Class AShooterCharacter Function UpdateWeaponHUD *********************************
+
 // ********** Begin Class AShooterCharacter ********************************************************
 void AShooterCharacter::StaticRegisterNativesAShooterCharacter()
 {
@@ -271,6 +325,7 @@ void AShooterCharacter::StaticRegisterNativesAShooterCharacter()
 		{ "DoStartFiring", &AShooterCharacter::execDoStartFiring },
 		{ "DoStopFiring", &AShooterCharacter::execDoStopFiring },
 		{ "DoSwitchWeapon", &AShooterCharacter::execDoSwitchWeapon },
+		{ "UpdateWeaponHUD", &AShooterCharacter::execUpdateWeaponHUD },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -412,6 +467,16 @@ struct Z_Construct_UClass_AShooterCharacter_Statics
 		{ "ToolTip", "Team ID for this character" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentWeapon_MetaData[] = {
+		{ "Category", "Weapons" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Weapon currently equipped and ready to shoot with */" },
+#endif
+		{ "ModuleRelativePath", "Variant_Shooter/ShooterCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Weapon currently equipped and ready to shoot with" },
+#endif
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RespawnTime_MetaData[] = {
 		{ "Category", "Destruction" },
 		{ "ClampMax", "10" },
@@ -429,6 +494,7 @@ struct Z_Construct_UClass_AShooterCharacter_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxAimDistance;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxHP;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_TeamByte;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_CurrentWeapon;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_RespawnTime;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -437,6 +503,7 @@ struct Z_Construct_UClass_AShooterCharacter_Statics
 		{ &Z_Construct_UFunction_AShooterCharacter_DoStartFiring, "DoStartFiring" }, // 3772532036
 		{ &Z_Construct_UFunction_AShooterCharacter_DoStopFiring, "DoStopFiring" }, // 1034790919
 		{ &Z_Construct_UFunction_AShooterCharacter_DoSwitchWeapon, "DoSwitchWeapon" }, // 2695605878
+		{ &Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD, "UpdateWeaponHUD" }, // 369163713
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
@@ -454,6 +521,7 @@ const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_AShooterCharacte
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterCharacter_Statics::NewProp_MaxAimDistance = { "MaxAimDistance", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterCharacter, MaxAimDistance), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxAimDistance_MetaData), NewProp_MaxAimDistance_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterCharacter_Statics::NewProp_MaxHP = { "MaxHP", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterCharacter, MaxHP), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxHP_MetaData), NewProp_MaxHP_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_AShooterCharacter_Statics::NewProp_TeamByte = { "TeamByte", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterCharacter, TeamByte), nullptr, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TeamByte_MetaData), NewProp_TeamByte_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AShooterCharacter_Statics::NewProp_CurrentWeapon = { "CurrentWeapon", nullptr, (EPropertyFlags)0x0124080000020005, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterCharacter, CurrentWeapon), Z_Construct_UClass_AShooterWeapon_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentWeapon_MetaData), NewProp_CurrentWeapon_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterCharacter_Statics::NewProp_RespawnTime = { "RespawnTime", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterCharacter, RespawnTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RespawnTime_MetaData), NewProp_RespawnTime_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AShooterCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterCharacter_Statics::NewProp_PawnNoiseEmitter,
@@ -465,6 +533,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AShooterC
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterCharacter_Statics::NewProp_MaxAimDistance,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterCharacter_Statics::NewProp_MaxHP,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterCharacter_Statics::NewProp_TeamByte,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterCharacter_Statics::NewProp_CurrentWeapon,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterCharacter_Statics::NewProp_RespawnTime,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AShooterCharacter_Statics::PropPointers) < 2048);
@@ -507,10 +576,10 @@ AShooterCharacter::~AShooterCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 1215916898U) },
+		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 537151283U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_2908178711(TEXT("/Script/StackAndShooter"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_282333258(TEXT("/Script/StackAndShooter"),
 	Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
