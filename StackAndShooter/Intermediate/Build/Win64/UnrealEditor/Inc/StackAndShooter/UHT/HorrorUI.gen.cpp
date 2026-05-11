@@ -324,14 +324,14 @@ UHorrorUI::~UHorrorUI() {}
 // ********** End Class UHorrorUI ******************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_UI_HorrorUI_h__Script_StackAndShooter_Statics
+struct Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Horror_UI_HorrorUI_h__Script_StackAndShooter_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UHorrorUI, UHorrorUI::StaticClass, TEXT("UHorrorUI"), &Z_Registration_Info_UClass_UHorrorUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHorrorUI), 3776350335U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_UI_HorrorUI_h__Script_StackAndShooter_2143526023(TEXT("/Script/StackAndShooter"),
-	Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_UI_HorrorUI_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_UI_HorrorUI_h__Script_StackAndShooter_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Horror_UI_HorrorUI_h__Script_StackAndShooter_2143526023(TEXT("/Script/StackAndShooter"),
+	Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Horror_UI_HorrorUI_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Horror_UI_HorrorUI_h__Script_StackAndShooter_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************
