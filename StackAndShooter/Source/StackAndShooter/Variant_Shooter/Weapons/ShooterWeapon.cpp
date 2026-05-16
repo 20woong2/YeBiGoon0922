@@ -130,6 +130,11 @@ void AShooterWeapon::Fire()
 	{
 		return;
 	}
+	// [수정] 1-2. 잔탄이 있는지 확인 (0 이하면 발사 중지)
+	if (CurrentBullets <= 0)
+	{
+		return;
+	}
 
 	// 2. 발사 시도 중인지 확인
 	if (!bIsFiring)
@@ -189,7 +194,7 @@ void AShooterWeapon::FireProjectile(const FVector& TargetLocation)
 	--CurrentBullets;
 
 	// 총알이 0 이하로 내려가면 0으로 고정 (자동 장전 삭제)
-	if (CurrentBullets < 0)
+	if (CurrentBullets <= 0)
 	{
 		CurrentBullets = 0;
 		OnRequestReload();
