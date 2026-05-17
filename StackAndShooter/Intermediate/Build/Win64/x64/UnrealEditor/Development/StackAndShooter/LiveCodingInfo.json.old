@@ -16,7 +16,6 @@
 			"ShooterAIController.cpp.obj",
 			"ShooterNPC.cpp.obj",
 			"ShooterStateTreeUtility.cpp.obj",
-			"ShooterCharacter.cpp.obj",
 			"ShooterGameMode.cpp.obj",
 			"ShooterPlayerController.cpp.obj",
 			"ShooterBulletCounterUI.cpp.obj",
@@ -46,6 +45,7 @@
 			"StackAndShooterCharacter.gen.cpp.obj",
 			"StackAndShooterGameMode.gen.cpp.obj",
 			"StackAndShooterPlayerController.gen.cpp.obj",
+			"ShooterCharacter.cpp.obj",
 			"ShooterWeapon.cpp.obj"
 		]
 	}

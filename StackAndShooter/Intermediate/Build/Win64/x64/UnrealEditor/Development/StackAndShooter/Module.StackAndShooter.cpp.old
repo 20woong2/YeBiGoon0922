@@ -13,7 +13,6 @@
 #include "C:/Unreal/YeBiGoon0922/StackAndShooter/Source/StackAndShooter/Variant_Shooter/AI/ShooterAIController.cpp"
 #include "C:/Unreal/YeBiGoon0922/StackAndShooter/Source/StackAndShooter/Variant_Shooter/AI/ShooterNPC.cpp"
 #include "C:/Unreal/YeBiGoon0922/StackAndShooter/Source/StackAndShooter/Variant_Shooter/AI/ShooterStateTreeUtility.cpp"
-#include "C:/Unreal/YeBiGoon0922/StackAndShooter/Source/StackAndShooter/Variant_Shooter/ShooterCharacter.cpp"
 #include "C:/Unreal/YeBiGoon0922/StackAndShooter/Source/StackAndShooter/Variant_Shooter/ShooterGameMode.cpp"
 #include "C:/Unreal/YeBiGoon0922/StackAndShooter/Source/StackAndShooter/Variant_Shooter/ShooterPlayerController.cpp"
 #include "C:/Unreal/YeBiGoon0922/StackAndShooter/Source/StackAndShooter/Variant_Shooter/UI/ShooterBulletCounterUI.cpp"
