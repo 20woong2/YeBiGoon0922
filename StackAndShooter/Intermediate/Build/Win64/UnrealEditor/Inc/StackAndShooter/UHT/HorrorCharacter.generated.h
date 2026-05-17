@@ -17,28 +17,28 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Delegate FUpdateSprintMeterDelegate ********************************************
-#define FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_12_DELEGATE \
+#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_12_DELEGATE \
 STACKANDSHOOTER_API void FUpdateSprintMeterDelegate_DelegateWrapper(const FMulticastScriptDelegate& UpdateSprintMeterDelegate, float Percentage);
 
 
 // ********** End Delegate FUpdateSprintMeterDelegate **********************************************
 
 // ********** Begin Delegate FSprintStateChangedDelegate *******************************************
-#define FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_13_DELEGATE \
+#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_13_DELEGATE \
 STACKANDSHOOTER_API void FSprintStateChangedDelegate_DelegateWrapper(const FMulticastScriptDelegate& SprintStateChangedDelegate, bool bSprinting);
 
 
 // ********** End Delegate FSprintStateChangedDelegate *********************************************
 
 // ********** Begin Class AHorrorCharacter *********************************************************
-#define FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execDoEndSprint); \
 	DECLARE_FUNCTION(execDoStartSprint);
 
 
 STACKANDSHOOTER_API UClass* Z_Construct_UClass_AHorrorCharacter_NoRegister();
 
-#define FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_22_INCLASS_NO_PURE_DECLS \
+#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAHorrorCharacter(); \
 	friend struct Z_Construct_UClass_AHorrorCharacter_Statics; \
@@ -49,7 +49,7 @@ public: \
 	DECLARE_SERIALIZER(AHorrorCharacter)
 
 
-#define FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_22_ENHANCED_CONSTRUCTORS \
+#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_22_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AHorrorCharacter(AHorrorCharacter&&) = delete; \
 	AHorrorCharacter(const AHorrorCharacter&) = delete; \
@@ -59,13 +59,13 @@ public: \
 	NO_API virtual ~AHorrorCharacter();
 
 
-#define FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_19_PROLOG
-#define FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_22_GENERATED_BODY \
+#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_19_PROLOG
+#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_22_INCLASS_NO_PURE_DECLS \
-	FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_22_ENHANCED_CONSTRUCTORS \
+	FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_22_INCLASS_NO_PURE_DECLS \
+	FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -75,6 +75,6 @@ class AHorrorCharacter;
 // ********** End Class AHorrorCharacter ***********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h
+#define CURRENT_FILE_ID FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Horror_HorrorCharacter_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -291,3 +291,15 @@ void AShooterCharacter::OnRespawn()
 	// destroy the character to force the PC to respawn
 	Destroy();
 }
+
+void AShooterCharacter::Heal(float HealAmount)
+{
+	// 죽은 상태면 회복 불가
+	if (CurrentHP <= 0.0f) return;
+
+	// 최대 체력을 넘지 않도록 제한
+	CurrentHP = FMath::Clamp(CurrentHP + HealAmount, 0.0f, MaxHP);
+
+	// 체력바 UI 업데이트
+	OnDamaged.Broadcast(FMath::Max(0.0f, CurrentHP / MaxHP));
+}

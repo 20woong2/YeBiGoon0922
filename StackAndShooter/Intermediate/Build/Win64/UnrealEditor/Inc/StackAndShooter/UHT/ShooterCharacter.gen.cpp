@@ -263,6 +263,55 @@ DEFINE_FUNCTION(AShooterCharacter::execDoSwitchWeapon)
 }
 // ********** End Class AShooterCharacter Function DoSwitchWeapon **********************************
 
+// ********** Begin Class AShooterCharacter Function Heal ******************************************
+struct Z_Construct_UFunction_AShooterCharacter_Heal_Statics
+{
+	struct ShooterCharacter_eventHeal_Parms
+	{
+		float HealAmount;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Combat|Health" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/*\xed\x9d\xa1\xed\x98\x88\xed\x83\x84 \xed\x94\xbc\xed\x9d\xa1*/" },
+#endif
+		{ "ModuleRelativePath", "Variant_Shooter/ShooterCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xed\x9d\xa1\xed\x98\x88\xed\x83\x84 \xed\x94\xbc\xed\x9d\xa1" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_HealAmount;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AShooterCharacter_Heal_Statics::NewProp_HealAmount = { "HealAmount", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ShooterCharacter_eventHeal_Parms, HealAmount), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AShooterCharacter_Heal_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AShooterCharacter_Heal_Statics::NewProp_HealAmount,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_Heal_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AShooterCharacter_Heal_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AShooterCharacter, nullptr, "Heal", Z_Construct_UFunction_AShooterCharacter_Heal_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_Heal_Statics::PropPointers), sizeof(Z_Construct_UFunction_AShooterCharacter_Heal_Statics::ShooterCharacter_eventHeal_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_Heal_Statics::Function_MetaDataParams), Z_Construct_UFunction_AShooterCharacter_Heal_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_AShooterCharacter_Heal_Statics::ShooterCharacter_eventHeal_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_AShooterCharacter_Heal()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShooterCharacter_Heal_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AShooterCharacter::execHeal)
+{
+	P_GET_PROPERTY(FFloatProperty,Z_Param_HealAmount);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Heal(Z_Param_HealAmount);
+	P_NATIVE_END;
+}
+// ********** End Class AShooterCharacter Function Heal ********************************************
+
 // ********** Begin Class AShooterCharacter Function UpdateWeaponHUD *******************************
 struct Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD_Statics
 {
@@ -325,6 +374,7 @@ void AShooterCharacter::StaticRegisterNativesAShooterCharacter()
 		{ "DoStartFiring", &AShooterCharacter::execDoStartFiring },
 		{ "DoStopFiring", &AShooterCharacter::execDoStopFiring },
 		{ "DoSwitchWeapon", &AShooterCharacter::execDoSwitchWeapon },
+		{ "Heal", &AShooterCharacter::execHeal },
 		{ "UpdateWeaponHUD", &AShooterCharacter::execUpdateWeaponHUD },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -503,6 +553,7 @@ struct Z_Construct_UClass_AShooterCharacter_Statics
 		{ &Z_Construct_UFunction_AShooterCharacter_DoStartFiring, "DoStartFiring" }, // 3772532036
 		{ &Z_Construct_UFunction_AShooterCharacter_DoStopFiring, "DoStopFiring" }, // 1034790919
 		{ &Z_Construct_UFunction_AShooterCharacter_DoSwitchWeapon, "DoSwitchWeapon" }, // 2695605878
+		{ &Z_Construct_UFunction_AShooterCharacter_Heal, "Heal" }, // 34580019
 		{ &Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD, "UpdateWeaponHUD" }, // 369163713
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -573,14 +624,14 @@ AShooterCharacter::~AShooterCharacter() {}
 // ********** End Class AShooterCharacter **********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics
+struct Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 537151283U) },
+		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 2028462543U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_282333258(TEXT("/Script/StackAndShooter"),
-	Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_59828591(TEXT("/Script/StackAndShooter"),
+	Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

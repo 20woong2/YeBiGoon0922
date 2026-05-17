@@ -122,6 +122,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Input")
 	void DoSwitchWeapon();
 
+	/*흡혈탄 피흡*/
+	UFUNCTION(BlueprintCallable, Category = "Combat|Health")
+	void Heal(float HealAmount);
+
 public:
 
 	//~Begin IShooterWeaponHolder interface
