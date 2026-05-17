@@ -33,7 +33,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_x64_Development_Editor|x64'">
     <LocalDebuggerCommandArguments>"$(SolutionDir)StackAndShooter.uproject" -skipcompile</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommandArgumentsHistory>"C:\Users\20woo\Documents\GitHub\YeBiGoon0922\StackAndShooter\StackAndShooter.uproject" -skipcompile|</LocalDebuggerCommandArgumentsHistory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_Development_Editor|x64'">
     <RemoteDebuggerCommandArguments>"$(SolutionDir)StackAndShooter.uproject" -skipcompile</RemoteDebuggerCommandArguments>

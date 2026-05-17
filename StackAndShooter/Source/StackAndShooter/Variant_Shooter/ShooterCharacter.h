@@ -57,10 +57,11 @@ protected:
 	float MaxAimDistance = 10000.0f;
 
 	/** Max HP this character can have */
-	UPROPERTY(EditAnywhere, Category="Health")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Health")
 	float MaxHP = 500.0f;
 
 	/** Current HP remaining to this character */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
 	float CurrentHP = 0.0f;
 
 	/** Team ID for this character*/

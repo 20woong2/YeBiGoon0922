@@ -68,7 +68,7 @@ protected:
 	TSubclassOf<UAnimInstance> ThirdPersonAnimInstanceClass;
 
 	/** Cone half-angle for variance while aiming */
-	UPROPERTY(EditAnywhere, Category="Aim", meta = (ClampMin = 0, ClampMax = 90, Units = "Degrees"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Aim", meta = (ClampMin = 0, ClampMax = 90, Units = "Degrees"))
 	float AimVariance = 0.0f;
 
 	/** Amount of firing recoil to apply to the owner */
@@ -88,8 +88,32 @@ protected:
 	bool bFullAuto = false;
 
 	/** Time between shots for this weapon. Affects both full auto and semi auto modes */
-	UPROPERTY(EditAnywhere, Category="Refire", meta = (ClampMin = 0, ClampMax = 5, Units = "s"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Refire", meta = (ClampMin = 0, ClampMax = 5, Units = "s"))
 	float RefireRate = 0.5f;
+
+	/** 점사 모드 켜기/끄기 */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refire")
+	bool bBurstFire = false;
+
+	/** 한 번 점사할 때 나갈 총알 수 (기본 3발) */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refire", meta = (ClampMin = 1, ClampMax = 10))
+	int32 BurstCount = 3;
+
+	/** 점사 시 총알과 총알 사이의 발사 간격 (초) */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refire", meta = (ClampMin = 0.01, ClampMax = 1.0, Units = "s"))
+	float BurstInterval = 0.1f;
+
+	/** (내부용) 현재 몇 발째 쏘고 있는지 기억하는 카운터 */
+	int32 CurrentBurstFired = 0;
+
+	/** (내부용) 점사용 타이머 핸들 */
+	FTimerHandle BurstTimer;
+
+	/** (내부용) 점사 전용 발사 함수 */
+	void HandleBurstFire();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aim", meta = (ClampMin = 1, ClampMax = 50))
+	int32 PelletCount = 1;
 
 	/** Game time of last shot fired, used to enforce refire rate on semi auto */
 	float TimeOfLastShot = 0.0f;

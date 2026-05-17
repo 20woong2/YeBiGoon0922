@@ -67,7 +67,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{826C10A8-DD1B-3001-8494-F6A5E91327A4}</ProjectGuid>
+    <ProjectGuid>{A8B42240-2918-3B32-91E4-EA7FD8DE481B}</ProjectGuid>
     <RootNamespace>StackAndShooter</RootNamespace>
   </PropertyGroup>
   <Import Project="UECommon.props" />
@@ -252,6 +252,8 @@
     <None Include="..\..\StackAndShooter.uproject"/>
     <None Include="..\..\Source\StackAndShooter.Target.cs"/>
     <None Include="..\..\Source\StackAndShooterEditor.Target.cs"/>
+    <None Include="..\..\.vsconfig"/>
+    <None Include="..\..\UpgradeLog.htm"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>

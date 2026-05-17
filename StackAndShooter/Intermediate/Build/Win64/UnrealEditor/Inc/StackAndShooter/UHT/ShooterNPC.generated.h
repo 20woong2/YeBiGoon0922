@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Delegate FPawnDeathDelegate ****************************************************
-#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h_10_DELEGATE \
+#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h_10_DELEGATE \
 STACKANDSHOOTER_API void FPawnDeathDelegate_DelegateWrapper(const FMulticastScriptDelegate& PawnDeathDelegate);
 
 
@@ -26,7 +26,7 @@ STACKANDSHOOTER_API void FPawnDeathDelegate_DelegateWrapper(const FMulticastScri
 // ********** Begin Class AShooterNPC **************************************************************
 STACKANDSHOOTER_API UClass* Z_Construct_UClass_AShooterNPC_NoRegister();
 
-#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h_22_INCLASS_NO_PURE_DECLS \
+#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAShooterNPC(); \
 	friend struct Z_Construct_UClass_AShooterNPC_Statics; \
@@ -38,7 +38,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<AShooterNPC*>(this); }
 
 
-#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h_22_ENHANCED_CONSTRUCTORS \
+#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h_22_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AShooterNPC(); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -50,12 +50,12 @@ public: \
 	NO_API virtual ~AShooterNPC();
 
 
-#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h_19_PROLOG
-#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h_22_GENERATED_BODY \
+#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h_19_PROLOG
+#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h_22_INCLASS_NO_PURE_DECLS \
-	FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h_22_ENHANCED_CONSTRUCTORS \
+	FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h_22_INCLASS_NO_PURE_DECLS \
+	FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -65,6 +65,6 @@ class AShooterNPC;
 // ********** End Class AShooterNPC ****************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h
+#define CURRENT_FILE_ID FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
