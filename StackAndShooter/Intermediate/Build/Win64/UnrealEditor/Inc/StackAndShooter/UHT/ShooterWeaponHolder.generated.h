@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Interface UShooterWeaponHolder *************************************************
 STACKANDSHOOTER_API UClass* Z_Construct_UClass_UShooterWeaponHolder_NoRegister();
 
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_17_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	STACKANDSHOOTER_API UShooterWeaponHolder(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -31,7 +31,7 @@ STACKANDSHOOTER_API UClass* Z_Construct_UClass_UShooterWeaponHolder_NoRegister()
 	virtual ~UShooterWeaponHolder() = default;
 
 
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_17_GENERATED_UINTERFACE_BODY() \
+#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_17_GENERATED_UINTERFACE_BODY() \
 private: \
 	static void StaticRegisterNativesUShooterWeaponHolder(); \
 	friend struct Z_Construct_UClass_UShooterWeaponHolder_Statics; \
@@ -42,15 +42,15 @@ public: \
 	DECLARE_SERIALIZER(UShooterWeaponHolder)
 
 
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_17_GENERATED_BODY \
+#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_17_GENERATED_BODY \
 	PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-	FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_17_GENERATED_UINTERFACE_BODY() \
-	FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_17_ENHANCED_CONSTRUCTORS \
+	FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_17_GENERATED_UINTERFACE_BODY() \
+	FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_17_INCLASS_IINTERFACE_NO_PURE_DECLS \
+#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_17_INCLASS_IINTERFACE_NO_PURE_DECLS \
 protected: \
 	virtual ~IShooterWeaponHolder() {} \
 public: \
@@ -59,11 +59,11 @@ public: \
 	virtual UObject* _getUObject() const { return nullptr; }
 
 
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_14_PROLOG
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_25_GENERATED_BODY \
+#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_14_PROLOG
+#define FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_25_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_17_INCLASS_IINTERFACE_NO_PURE_DECLS \
+	FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h_17_INCLASS_IINTERFACE_NO_PURE_DECLS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -73,6 +73,6 @@ class UShooterWeaponHolder;
 // ********** End Interface UShooterWeaponHolder ***************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h
+#define CURRENT_FILE_ID FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeaponHolder_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

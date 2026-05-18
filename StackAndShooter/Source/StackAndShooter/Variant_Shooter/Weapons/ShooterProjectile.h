@@ -46,7 +46,7 @@ protected:
 	float PhysicsForce = 100.0f;
 
 	/** Damage to apply on hit */
-	UPROPERTY(EditAnywhere, Category="Projectile|Hit", meta = (ClampMin = 0, ClampMax = 100))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Projectile|Hit", meta = (ClampMin = 0, ClampMax = 100))
 	float HitDamage = 25.0f;
 
 	/** Type of damage to apply. Can be used to represent specific types of damage such as fire, explosion, etc. */

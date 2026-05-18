@@ -6,12 +6,7 @@
 /NAME:"UnrealEditor-StackAndShooter.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
-"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Module.StackAndShooter.cpp.obj"
-"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/ShooterCharacter.cpp.obj"
-"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/ShooterNPC.cpp.obj"
-"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/ShooterProjectile.cpp.obj"
-"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/ShooterCharacter.gen.cpp.obj"
-"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/StackAndShooter.init.gen.cpp.obj"
-"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Default.rc2.res"
-/OUT:"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/UnrealEditor-StackAndShooter.lib"
+"C:/Users/user/Documents/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"C:/Users/user/Documents/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Module.StackAndShooter.cpp.obj"
+"C:/Users/user/Documents/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Default.rc2.res"
+/OUT:"C:/Users/user/Documents/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/UnrealEditor-StackAndShooter.lib"

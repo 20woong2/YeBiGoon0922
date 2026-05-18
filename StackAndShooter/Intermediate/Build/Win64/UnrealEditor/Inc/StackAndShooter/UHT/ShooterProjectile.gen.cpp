@@ -294,7 +294,7 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterProject
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterProjectile_Statics::NewProp_NoiseRange = { "NoiseRange", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterProjectile, NoiseRange), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NoiseRange_MetaData), NewProp_NoiseRange_MetaData) };
 const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_AShooterProjectile_Statics::NewProp_NoiseTag = { "NoiseTag", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterProjectile, NoiseTag), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NoiseTag_MetaData), NewProp_NoiseTag_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterProjectile_Statics::NewProp_PhysicsForce = { "PhysicsForce", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterProjectile, PhysicsForce), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PhysicsForce_MetaData), NewProp_PhysicsForce_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterProjectile_Statics::NewProp_HitDamage = { "HitDamage", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterProjectile, HitDamage), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HitDamage_MetaData), NewProp_HitDamage_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterProjectile_Statics::NewProp_HitDamage = { "HitDamage", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterProjectile, HitDamage), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HitDamage_MetaData), NewProp_HitDamage_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AShooterProjectile_Statics::NewProp_HitDamageType = { "HitDamageType", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterProjectile, HitDamageType), Z_Construct_UClass_UClass, Z_Construct_UClass_UDamageType_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HitDamageType_MetaData), NewProp_HitDamageType_MetaData) };
 void Z_Construct_UClass_AShooterProjectile_Statics::NewProp_bDamageOwner_SetBit(void* Obj)
 {
@@ -356,14 +356,14 @@ AShooterProjectile::~AShooterProjectile() {}
 // ********** End Class AShooterProjectile *********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_Statics
+struct Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterProjectile, AShooterProjectile::StaticClass, TEXT("AShooterProjectile"), &Z_Registration_Info_UClass_AShooterProjectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterProjectile), 939060621U) },
+		{ Z_Construct_UClass_AShooterProjectile, AShooterProjectile::StaticClass, TEXT("AShooterProjectile"), &Z_Registration_Info_UClass_AShooterProjectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterProjectile), 4048999301U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_3119630017(TEXT("/Script/StackAndShooter"),
-	Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_4170075669(TEXT("/Script/StackAndShooter"),
+	Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************
