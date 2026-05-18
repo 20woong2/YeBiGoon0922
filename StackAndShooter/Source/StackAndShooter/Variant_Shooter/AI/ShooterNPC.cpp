@@ -2,6 +2,8 @@
 
 
 #include "Variant_Shooter/AI/ShooterNPC.h"
+#include "ShooterCharacter.h" // 추가: 플레이어 스탯을 읽어오기 위해 포함
+#include "Kismet/GameplayStatics.h" // 추가: GetPlayerCharacter를 쓰기 위해 포함
 #include "ShooterWeapon.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Camera/CameraComponent.h"
@@ -41,7 +43,17 @@ float AShooterNPC::TakeDamage(float Damage, struct FDamageEvent const& DamageEve
 		return 0.0f;
 	}
 
-	// Reduce HP
+	// ========================================================
+	// [핵심 추가] 데미지 뻥튀기 로직
+	// 1. 현재 맵의 플레이어 캐릭터를 가져옵니다.
+	if (AShooterCharacter* PlayerChar = Cast<AShooterCharacter>(UGameplayStatics::GetPlayerCharacter(this, 0)))
+	{
+		// 2. 총알의 기본 데미지에 플레이어의 데미지 배수(예: 1.5)를 곱해줍니다!
+		Damage = Damage * PlayerChar->DamageMultiplier;
+	}
+	// ========================================================
+
+	// Reduce HP (이제 뻥튀기된 데미지로 체력이 깎입니다!)
 	CurrentHP -= Damage;
 
 	// Have we depleted HP?

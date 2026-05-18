@@ -107,7 +107,7 @@ void AShooterProjectile::ExplosionCheck(const FVector& ExplosionCenter)
 	FCollisionObjectQueryParams ObjectParams;
 	ObjectParams.AddObjectTypesToQuery(ECC_Pawn);
 	ObjectParams.AddObjectTypesToQuery(ECC_WorldDynamic);
-	ObjectParams.AddObjectTypesToQuery(ECC_PhysicsBody);
+	ObjectParams.AddObjectTypesToQuery(ECC_PhysicsBody); 
 
 	FCollisionQueryParams QueryParams;
 	QueryParams.AddIgnoredActor(this);

@@ -51,7 +51,7 @@ protected:
 	/** Name of the first person mesh weapon socket */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category ="Weapons")
 	FName FirstPersonWeaponSocket = FName("HandGrip_R");
-
+	
 	/** Name of the third person mesh weapon socket */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category ="Weapons")
 	FName ThirdPersonWeaponSocket = FName("HandGrip_R");

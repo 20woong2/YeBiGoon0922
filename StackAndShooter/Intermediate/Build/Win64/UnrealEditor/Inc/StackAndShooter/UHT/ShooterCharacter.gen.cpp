@@ -544,6 +544,16 @@ struct Z_Construct_UClass_AShooterCharacter_Statics
 		{ "ModuleRelativePath", "Variant_Shooter/ShooterCharacter.h" },
 		{ "Units", "s" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DamageMultiplier_MetaData[] = {
+		{ "Category", "Stats" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xeb\xb8\x94\xeb\xa3\xa8\xed\x94\x84\xeb\xa6\xb0\xed\x8a\xb8\xec\x97\x90\xec\x84\x9c \xec\xb9\xb4\xeb\x93\x9c\xeb\xa5\xbc \xeb\xa8\xb9\xec\x9d\x84 \xeb\x95\x8c \xea\xb3\xb1\xed\x95\xb4\xec\xa3\xbc\xea\xb8\xb0 \xec\x9c\x84\xed\x95\xb4 BlueprintReadWrite\xeb\xa1\x9c \xec\x97\xbd\xeb\x8b\x88\xeb\x8b\xa4.\n// \xea\xb8\xb0\xeb\xb3\xb8\xea\xb0\x92\xec\x9d\x80 \xeb\xb0\x98\xeb\x93\x9c\xec\x8b\x9c 1.0f \xec\x9d\xb4\xec\x96\xb4\xec\x95\xbc \xec\x9b\x90\xeb\x9e\x98 \xeb\x8d\xb0\xeb\xaf\xb8\xec\xa7\x80\xea\xb0\x80 \xeb\x93\xa4\xec\x96\xb4\xea\xb0\x91\xeb\x8b\x88\xeb\x8b\xa4!\n" },
+#endif
+		{ "ModuleRelativePath", "Variant_Shooter/ShooterCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xeb\xb8\x94\xeb\xa3\xa8\xed\x94\x84\xeb\xa6\xb0\xed\x8a\xb8\xec\x97\x90\xec\x84\x9c \xec\xb9\xb4\xeb\x93\x9c\xeb\xa5\xbc \xeb\xa8\xb9\xec\x9d\x84 \xeb\x95\x8c \xea\xb3\xb1\xed\x95\xb4\xec\xa3\xbc\xea\xb8\xb0 \xec\x9c\x84\xed\x95\xb4 BlueprintReadWrite\xeb\xa1\x9c \xec\x97\xbd\xeb\x8b\x88\xeb\x8b\xa4.\n\xea\xb8\xb0\xeb\xb3\xb8\xea\xb0\x92\xec\x9d\x80 \xeb\xb0\x98\xeb\x93\x9c\xec\x8b\x9c 1.0f \xec\x9d\xb4\xec\x96\xb4\xec\x95\xbc \xec\x9b\x90\xeb\x9e\x98 \xeb\x8d\xb0\xeb\xaf\xb8\xec\xa7\x80\xea\xb0\x80 \xeb\x93\xa4\xec\x96\xb4\xea\xb0\x91\xeb\x8b\x88\xeb\x8b\xa4!" },
+#endif
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PawnNoiseEmitter;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_DefaultWeaponClass;
@@ -557,6 +567,7 @@ struct Z_Construct_UClass_AShooterCharacter_Statics
 	static const UECodeGen_Private::FBytePropertyParams NewProp_TeamByte;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CurrentWeapon;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_RespawnTime;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageMultiplier;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -586,6 +597,7 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterCharact
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_AShooterCharacter_Statics::NewProp_TeamByte = { "TeamByte", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterCharacter, TeamByte), nullptr, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TeamByte_MetaData), NewProp_TeamByte_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AShooterCharacter_Statics::NewProp_CurrentWeapon = { "CurrentWeapon", nullptr, (EPropertyFlags)0x0124080000020005, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterCharacter, CurrentWeapon), Z_Construct_UClass_AShooterWeapon_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentWeapon_MetaData), NewProp_CurrentWeapon_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterCharacter_Statics::NewProp_RespawnTime = { "RespawnTime", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterCharacter, RespawnTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RespawnTime_MetaData), NewProp_RespawnTime_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterCharacter_Statics::NewProp_DamageMultiplier = { "DamageMultiplier", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterCharacter, DamageMultiplier), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DamageMultiplier_MetaData), NewProp_DamageMultiplier_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AShooterCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterCharacter_Statics::NewProp_PawnNoiseEmitter,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterCharacter_Statics::NewProp_DefaultWeaponClass,
@@ -599,6 +611,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AShooterC
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterCharacter_Statics::NewProp_TeamByte,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterCharacter_Statics::NewProp_CurrentWeapon,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterCharacter_Statics::NewProp_RespawnTime,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterCharacter_Statics::NewProp_DamageMultiplier,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AShooterCharacter_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AShooterCharacter_Statics::DependentSingletons[])() = {
@@ -640,10 +653,10 @@ AShooterCharacter::~AShooterCharacter() {}
 struct Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 454759794U) },
+		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 309296494U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_787019665(TEXT("/Script/StackAndShooter"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_1471402208(TEXT("/Script/StackAndShooter"),
 	Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -81,6 +81,11 @@ protected:
 	FTimerHandle RespawnTimer;
 
 public:
+	// 블루프린트에서 카드를 먹을 때 곱해주기 위해 BlueprintReadWrite로 엽니다.
+	// 기본값은 반드시 1.0f 이어야 원래 데미지가 들어갑니다!
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Stats")
+	float DamageMultiplier = 1.0f;
+public:
 
 	/** Bullet count updated delegate */
 	FBulletCountUpdatedDelegate OnBulletCountUpdated;

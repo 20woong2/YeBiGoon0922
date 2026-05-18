@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StackAndShooterModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+169d8700232b49c0560a57b9d264997d4b73f027")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60f72f2025aab1a92c912102ace4f290a0023682")]
 [assembly: System.Reflection.AssemblyProductAttribute("StackAndShooterModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StackAndShooterModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
