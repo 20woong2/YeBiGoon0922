@@ -6,7 +6,7 @@
 /NAME:"UnrealEditor-StackAndShooter.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"C:/Users/user/Documents/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
-"C:/Users/user/Documents/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Module.StackAndShooter.cpp.obj"
-"C:/Users/user/Documents/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Default.rc2.res"
-/OUT:"C:/Users/user/Documents/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/UnrealEditor-StackAndShooter.lib"
+"C:/Users/20woo/Documents/GitHub/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"C:/Users/20woo/Documents/GitHub/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Module.StackAndShooter.cpp.obj"
+"C:/Users/20woo/Documents/GitHub/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Default.rc2.res"
+/OUT:"C:/Users/20woo/Documents/GitHub/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/UnrealEditor-StackAndShooter.lib"

@@ -88,7 +88,6 @@ float AShooterCharacter::TakeDamage(float Damage, struct FDamageEvent const& Dam
 
 	// update the HUD
 	OnDamaged.Broadcast(FMath::Max(0.0f, CurrentHP / MaxHP));
-
 	return Damage;
 }
 

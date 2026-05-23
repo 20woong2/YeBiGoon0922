@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\StackAndShooter.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\StackAndShooter.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\StackAndShooterEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\UpgradeLog.htm" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\StackAndShooter">
+      <UniqueIdentifier>{44E0C714-BE78-33CB-BBE7-534B1542EB5E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\StackAndShooter\StackAndShooter.Build.cs">
+      <Filter>Source\StackAndShooter</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\StackAndShooter\StackAndShooter.cpp">
+      <Filter>Source\StackAndShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\StackAndShooter.h">
+      <Filter>Source\StackAndShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\StackAndShooter\StackAndShooterCameraManager.cpp">
+      <Filter>Source\StackAndShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\StackAndShooterCameraManager.h">
+      <Filter>Source\StackAndShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\StackAndShooter\StackAndShooterCharacter.cpp">
+      <Filter>Source\StackAndShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\StackAndShooterCharacter.h">
+      <Filter>Source\StackAndShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\StackAndShooter\StackAndShooterGameMode.cpp">
+      <Filter>Source\StackAndShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\StackAndShooterGameMode.h">
+      <Filter>Source\StackAndShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\StackAndShooter\StackAndShooterPlayerController.cpp">
+      <Filter>Source\StackAndShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\StackAndShooterPlayerController.h">
+      <Filter>Source\StackAndShooter</Filter>
+    </ClInclude>
+    <Filter Include="Source\StackAndShooter\Variant_Horror">
+      <UniqueIdentifier>{02A6EA51-B893-39D8-AD56-2B53FD0FAAC3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Horror\HorrorCharacter.cpp">
+      <Filter>Source\StackAndShooter\Variant_Horror</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Horror\HorrorCharacter.h">
+      <Filter>Source\StackAndShooter\Variant_Horror</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Horror\HorrorGameMode.cpp">
+      <Filter>Source\StackAndShooter\Variant_Horror</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Horror\HorrorGameMode.h">
+      <Filter>Source\StackAndShooter\Variant_Horror</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Horror\HorrorPlayerController.cpp">
+      <Filter>Source\StackAndShooter\Variant_Horror</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Horror\HorrorPlayerController.h">
+      <Filter>Source\StackAndShooter\Variant_Horror</Filter>
+    </ClInclude>
+    <Filter Include="Source\StackAndShooter\Variant_Horror\UI">
+      <UniqueIdentifier>{2DFCF2A6-F25F-37D2-BB5D-6B6782FAE2A4}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Horror\UI\HorrorUI.cpp">
+      <Filter>Source\StackAndShooter\Variant_Horror\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Horror\UI\HorrorUI.h">
+      <Filter>Source\StackAndShooter\Variant_Horror\UI</Filter>
+    </ClInclude>
+    <Filter Include="Source\StackAndShooter\Variant_Shooter">
+      <UniqueIdentifier>{1C408788-3B6F-34A5-A7A0-12EDFC195993}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Shooter\ShooterCharacter.cpp">
+      <Filter>Source\StackAndShooter\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Shooter\ShooterCharacter.h">
+      <Filter>Source\StackAndShooter\Variant_Shooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Shooter\ShooterGameMode.cpp">
+      <Filter>Source\StackAndShooter\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Shooter\ShooterGameMode.h">
+      <Filter>Source\StackAndShooter\Variant_Shooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Shooter\ShooterPlayerController.cpp">
+      <Filter>Source\StackAndShooter\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Shooter\ShooterPlayerController.h">
+      <Filter>Source\StackAndShooter\Variant_Shooter</Filter>
+    </ClInclude>
+    <Filter Include="Source\StackAndShooter\Variant_Shooter\AI">
+      <UniqueIdentifier>{3FAF4834-7ED5-3564-BBA4-41E6AE6FB0A0}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Shooter\AI\EnvQueryContext_Target.cpp">
+      <Filter>Source\StackAndShooter\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Shooter\AI\EnvQueryContext_Target.h">
+      <Filter>Source\StackAndShooter\Variant_Shooter\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Shooter\AI\ShooterAIController.cpp">
+      <Filter>Source\StackAndShooter\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Shooter\AI\ShooterAIController.h">
+      <Filter>Source\StackAndShooter\Variant_Shooter\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Shooter\AI\ShooterNPC.cpp">
+      <Filter>Source\StackAndShooter\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Shooter\AI\ShooterNPC.h">
+      <Filter>Source\StackAndShooter\Variant_Shooter\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Shooter\AI\ShooterStateTreeUtility.cpp">
+      <Filter>Source\StackAndShooter\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Shooter\AI\ShooterStateTreeUtility.h">
+      <Filter>Source\StackAndShooter\Variant_Shooter\AI</Filter>
+    </ClInclude>
+    <Filter Include="Source\StackAndShooter\Variant_Shooter\UI">
+      <UniqueIdentifier>{7014C1AA-75D6-300A-A56A-7C420DEE261D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Shooter\UI\ShooterBulletCounterUI.cpp">
+      <Filter>Source\StackAndShooter\Variant_Shooter\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Shooter\UI\ShooterBulletCounterUI.h">
+      <Filter>Source\StackAndShooter\Variant_Shooter\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Shooter\UI\ShooterUI.cpp">
+      <Filter>Source\StackAndShooter\Variant_Shooter\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Shooter\UI\ShooterUI.h">
+      <Filter>Source\StackAndShooter\Variant_Shooter\UI</Filter>
+    </ClInclude>
+    <Filter Include="Source\StackAndShooter\Variant_Shooter\Weapons">
+      <UniqueIdentifier>{04517529-AF55-3FD2-A9F7-1EB3D1653C7F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Shooter\Weapons\ShooterPickup.cpp">
+      <Filter>Source\StackAndShooter\Variant_Shooter\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Shooter\Weapons\ShooterPickup.h">
+      <Filter>Source\StackAndShooter\Variant_Shooter\Weapons</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Shooter\Weapons\ShooterProjectile.cpp">
+      <Filter>Source\StackAndShooter\Variant_Shooter\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Shooter\Weapons\ShooterProjectile.h">
+      <Filter>Source\StackAndShooter\Variant_Shooter\Weapons</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Shooter\Weapons\ShooterWeapon.cpp">
+      <Filter>Source\StackAndShooter\Variant_Shooter\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Shooter\Weapons\ShooterWeapon.h">
+      <Filter>Source\StackAndShooter\Variant_Shooter\Weapons</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\StackAndShooter\Variant_Shooter\Weapons\ShooterWeaponHolder.cpp">
+      <Filter>Source\StackAndShooter\Variant_Shooter\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\StackAndShooter\Variant_Shooter\Weapons\ShooterWeaponHolder.h">
+      <Filter>Source\StackAndShooter\Variant_Shooter\Weapons</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

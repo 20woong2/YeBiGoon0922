@@ -25,6 +25,7 @@ void AShooterNPC::BeginPlay()
 	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
 	Weapon = GetWorld()->SpawnActor<AShooterWeapon>(WeaponClass, GetActorTransform(), SpawnParams);
+	CurrentHP = MaxHP;
 }
 
 void AShooterNPC::EndPlay(const EEndPlayReason::Type EndPlayReason)
@@ -37,6 +38,7 @@ void AShooterNPC::EndPlay(const EEndPlayReason::Type EndPlayReason)
 
 float AShooterNPC::TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
+	
 	// ignore if already dead
 	if (bIsDead)
 	{
@@ -61,7 +63,7 @@ float AShooterNPC::TakeDamage(float Damage, struct FDamageEvent const& DamageEve
 	{
 		Die();
 	}
-
+	Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
 	return Damage;
 }
 

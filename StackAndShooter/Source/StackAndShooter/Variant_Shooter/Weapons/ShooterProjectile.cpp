@@ -54,7 +54,7 @@ void AShooterProjectile::EndPlay(EEndPlayReason::Type EndPlayReason)
 
 void AShooterProjectile::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
 {
-	// ignore if we've already hit something else
+	/* ignore if we've already hit something else
 	if (bHit)
 	{
 		return;
@@ -64,7 +64,7 @@ void AShooterProjectile::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Ot
 
 	// disable collision on the projectile
 	CollisionComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-
+	*/
 	// make AI perception noise
 	MakeNoise(NoiseLoudness, GetInstigator(), GetActorLocation(), NoiseRange, NoiseTag);
 
@@ -83,7 +83,7 @@ void AShooterProjectile::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Ot
 
 	// pass control to BP for any extra effects
 	BP_OnProjectileHit(Hit);
-
+	/*
 	// check if we should schedule deferred destruction of the projectile
 	if (DeferredDestructionTime > 0.0f)
 	{
@@ -94,6 +94,7 @@ void AShooterProjectile::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Ot
 		// destroy the projectile right away
 		Destroy();
 	}
+	*/
 }
 
 void AShooterProjectile::ExplosionCheck(const FVector& ExplosionCenter)

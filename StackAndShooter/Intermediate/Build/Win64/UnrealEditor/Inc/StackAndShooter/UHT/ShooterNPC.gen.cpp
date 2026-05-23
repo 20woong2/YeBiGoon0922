@@ -95,7 +95,7 @@ struct Z_Construct_UClass_AShooterNPC_Statics
 		{ "ToolTip", "A simple AI-controlled shooter game NPC\nExecutes its behavior through a StateTree managed by its AI Controller\nHolds and manages a weapon" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentHP_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MaxHP_MetaData[] = {
 		{ "Category", "Damage" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Current HP for this character. It dies if it reaches zero through damage */" },
@@ -104,6 +104,10 @@ struct Z_Construct_UClass_AShooterNPC_Statics
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Current HP for this character. It dies if it reaches zero through damage" },
 #endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentHP_MetaData[] = {
+		{ "Category", "Damage" },
+		{ "ModuleRelativePath", "Variant_Shooter/AI/ShooterNPC.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RagdollCollisionProfile_MetaData[] = {
 		{ "Category", "Damage" },
@@ -206,6 +210,7 @@ struct Z_Construct_UClass_AShooterNPC_Statics
 #endif
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxHP;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_CurrentHP;
 	static const UECodeGen_Private::FNamePropertyParams NewProp_RagdollCollisionProfile;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_DeferredDestructionTime;
@@ -225,6 +230,7 @@ struct Z_Construct_UClass_AShooterNPC_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterNPC_Statics::NewProp_MaxHP = { "MaxHP", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterNPC, MaxHP), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxHP_MetaData), NewProp_MaxHP_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterNPC_Statics::NewProp_CurrentHP = { "CurrentHP", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterNPC, CurrentHP), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentHP_MetaData), NewProp_CurrentHP_MetaData) };
 const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_AShooterNPC_Statics::NewProp_RagdollCollisionProfile = { "RagdollCollisionProfile", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterNPC, RagdollCollisionProfile), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RagdollCollisionProfile_MetaData), NewProp_RagdollCollisionProfile_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterNPC_Statics::NewProp_DeferredDestructionTime = { "DeferredDestructionTime", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterNPC, DeferredDestructionTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DeferredDestructionTime_MetaData), NewProp_DeferredDestructionTime_MetaData) };
@@ -237,6 +243,7 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterNPC_Sta
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterNPC_Statics::NewProp_MinAimOffsetZ = { "MinAimOffsetZ", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterNPC, MinAimOffsetZ), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MinAimOffsetZ_MetaData), NewProp_MinAimOffsetZ_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterNPC_Statics::NewProp_MaxAimOffsetZ = { "MaxAimOffsetZ", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterNPC, MaxAimOffsetZ), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxAimOffsetZ_MetaData), NewProp_MaxAimOffsetZ_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AShooterNPC_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterNPC_Statics::NewProp_MaxHP,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterNPC_Statics::NewProp_CurrentHP,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterNPC_Statics::NewProp_RagdollCollisionProfile,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterNPC_Statics::NewProp_DeferredDestructionTime,
@@ -287,14 +294,14 @@ AShooterNPC::~AShooterNPC() {}
 // ********** End Class AShooterNPC ****************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h__Script_StackAndShooter_Statics
+struct Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h__Script_StackAndShooter_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterNPC, AShooterNPC::StaticClass, TEXT("AShooterNPC"), &Z_Registration_Info_UClass_AShooterNPC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterNPC), 607258612U) },
+		{ Z_Construct_UClass_AShooterNPC, AShooterNPC::StaticClass, TEXT("AShooterNPC"), &Z_Registration_Info_UClass_AShooterNPC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterNPC), 3012277779U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h__Script_StackAndShooter_340629802(TEXT("/Script/StackAndShooter"),
-	Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h__Script_StackAndShooter_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h__Script_StackAndShooter_432059910(TEXT("/Script/StackAndShooter"),
+	Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_AI_ShooterNPC_h__Script_StackAndShooter_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

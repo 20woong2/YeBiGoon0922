@@ -177,6 +177,10 @@ void AShooterWeapon::FireProjectile(const FVector& TargetLocation)
 		SpawnParams.Instigator = PawnOwner;
 
 		AShooterProjectile* Projectile = GetWorld()->SpawnActor<AShooterProjectile>(ProjectileClass, ProjectileTransform, SpawnParams);
+		if (i != PelletCount - 1)
+		{
+			--CurrentBullets;
+		}
 	}
 
 	// ----------------------------------------------------------------------------------
