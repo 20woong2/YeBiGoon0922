@@ -64,6 +64,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
 	float CurrentHP = 0.0f;
 
+	UFUNCTION(BlueprintCallable, Category = "Health")
+	void ResetHP();
 	/** Team ID for this character*/
 	UPROPERTY(EditAnywhere, Category="Team")
 	uint8 TeamByte = 0;
@@ -108,6 +110,12 @@ protected:
 
 	/** Set up input action bindings */
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
+
+	// 시작 위치 기억용 변수
+	FVector InitialSpawnLoc;
+
+	// 엔진의 낙사 즉사 판정 가로채기 선언
+	virtual void FellOutOfWorld(const class UDamageType& dmgType) override;
 
 public:
 

@@ -12,6 +12,7 @@
 #include "Camera/CameraComponent.h"
 #include "TimerManager.h"
 #include "ShooterGameMode.h"
+#include "Engine/DamageEvents.h"
 
 AShooterCharacter::AShooterCharacter()
 {
@@ -32,6 +33,9 @@ void AShooterCharacter::BeginPlay()
 
 	// update the HUD
 	OnDamaged.Broadcast(1.0f);
+
+	// 게임 시작 시 내가 서 있던 자리 기억해두기
+	InitialSpawnLoc = GetActorLocation();
 }
 void AShooterCharacter::GrantDefaultWeapon()
 {
@@ -301,4 +305,28 @@ void AShooterCharacter::Heal(float HealAmount)
 
 	// 체력바 UI 업데이트
 	OnDamaged.Broadcast(FMath::Max(0.0f, CurrentHP / MaxHP));
+}
+
+void AShooterCharacter::ResetHP()
+{
+	// 1. 현재 체력을 최대 체력(MaxHP)으로 덮어씌웁니다.
+	CurrentHP = MaxHP;
+
+	// 2. 꽉 찬 체력을 체력바 UI에도 알려줍니다! (1.0f는 100% 비율을 의미합니다)
+	OnDamaged.Broadcast(1.0f);
+}
+
+void AShooterCharacter::FellOutOfWorld(const class UDamageType& dmgType)
+{
+	// 원래 있던 Super::FellOutOfWorld(dmgType); 를 절대 적지 않습니다. (엔진의 즉사 기능을 여기서 끊어버립니다)
+
+	// 1. 딱 100 데미지만 입히기
+	TakeDamage(100.0f, FDamageEvent(), nullptr, nullptr);
+
+	// 2. 만약 데미지를 받고도 피가 남아서 살아있다면?
+	if (CurrentHP > 0.0f)
+	{
+		// 기억해둔 시작 위치로 텔레포트!
+		SetActorLocation(InitialSpawnLoc);
+	}
 }

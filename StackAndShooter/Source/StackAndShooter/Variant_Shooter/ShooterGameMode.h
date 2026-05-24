@@ -39,4 +39,8 @@ public:
 
 	/** Increases the score for the given team */
 	void IncrementTeamScore(uint8 TeamByte);
+
+	UFUNCTION(BlueprintImplementableEvent, Category="Score")
+	void OnScoreIncremented(uint8 TeamId, int32 NewScore);
+	
 };

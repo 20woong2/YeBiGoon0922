@@ -17,17 +17,22 @@ void AShooterGameMode::BeginPlay()
 
 void AShooterGameMode::IncrementTeamScore(uint8 TeamByte)
 {
-	// retrieve the team score if any
-	int32 Score = 0;
-	if (int32* FoundScore = TeamScores.Find(TeamByte))
-	{
-		Score = *FoundScore;
-	}
+		// 죽은 팀이 0번이면 승자는 1번, 죽은 팀이 1번이면 승자는 0번
+		uint8 WinnerTeam = (TeamByte == 0) ? 1 : 0;
 
-	// increment the score for the given team
-	++Score;
-	TeamScores.Add(TeamByte, Score);
+		int32 Score = 0;
+		if (int32* FoundScore = TeamScores.Find(WinnerTeam)) // WinnerTeam의 점수를 찾
+		{
+			Score = *FoundScore;
+		}
 
-	// update the UI
-	ShooterUI->BP_UpdateScore(TeamByte, Score);
+		
+		++Score;
+		TeamScores.Add(WinnerTeam, Score); // WinnerTeam에게 점수
+
+		// update the UI
+		ShooterUI->BP_UpdateScore(WinnerTeam, Score);
+
+		// 블루프린트에게 전달
+		OnScoreIncremented(WinnerTeam, Score);
 }

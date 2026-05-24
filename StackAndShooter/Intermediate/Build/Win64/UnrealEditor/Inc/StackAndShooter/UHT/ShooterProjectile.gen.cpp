@@ -356,14 +356,14 @@ AShooterProjectile::~AShooterProjectile() {}
 // ********** End Class AShooterProjectile *********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_Statics
+struct Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_AShooterProjectile, AShooterProjectile::StaticClass, TEXT("AShooterProjectile"), &Z_Registration_Info_UClass_AShooterProjectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterProjectile), 4048999301U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_4170075669(TEXT("/Script/StackAndShooter"),
-	Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_4170075669(TEXT("/Script/StackAndShooter"),
+	Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h__Script_StackAndShooter_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

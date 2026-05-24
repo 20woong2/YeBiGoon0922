@@ -3790,6 +3790,14 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Runtime/HDRIBackdrop/Binaries/Win64/UnrealEditor-HDRIBackdrop.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Runtime/HDRIBackdrop/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Runtime/HairStrands/Binaries/Win64/UnrealEditor-HairCardGeneratorFramework.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -4187,6 +4195,26 @@
 		},
 		{
 			"Path": "$(ProjectDir)/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/VisualStudioTools/Binaries/Win64/UnrealEditor-VisualStudioBlueprintDebuggerHelper.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/VisualStudioTools/Binaries/Win64/UnrealEditor-VisualStudioBlueprintDebuggerHelper.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/VisualStudioTools/Binaries/Win64/UnrealEditor-VisualStudioTools.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/VisualStudioTools/Binaries/Win64/UnrealEditor-VisualStudioTools.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/VisualStudioTools/Binaries/Win64/UnrealEditor.modules",
 			"Type": "RequiredResource"
 		}
 	],
@@ -28584,6 +28612,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Runtime/HDRIBackdrop/HDRIBackdrop.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Runtime/HairStrands/HairStrands.uplugin",
 			"Type": "UFS"
 		},
@@ -28696,6 +28728,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/VisualStudioTools/VisualStudioTools.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(ProjectDir)/StackAndShooter.uproject",
 			"Type": "UFS"
 		}
@@ -28796,6 +28832,7 @@
 		"GitSourceControl",
 		"GoogleCloudMessaging",
 		"GooglePAD",
+		"HDRIBackdrop",
 		"HairStrands",
 		"IKRig",
 		"IOSDeviceProfileSelector",
@@ -28898,6 +28935,7 @@
 		"VariantManagerContent",
 		"VisualStudioCodeSourceCodeAccess",
 		"VisualStudioSourceCodeAccess",
+		"VisualStudioTools",
 		"WaveTable",
 		"WebMMedia",
 		"WebMMoviePlayer",
