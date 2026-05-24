@@ -435,7 +435,7 @@ AShooterPickup::~AShooterPickup() {}
 // ********** End Class AShooterPickup *************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterPickup_h__Script_StackAndShooter_Statics
+struct Z_CompiledInDeferFile_FID_Users_USER_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterPickup_h__Script_StackAndShooter_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FWeaponTableRow::StaticStruct, Z_Construct_UScriptStruct_FWeaponTableRow_Statics::NewStructOps, TEXT("WeaponTableRow"), &Z_Registration_Info_UScriptStruct_FWeaponTableRow, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWeaponTableRow), 2732612760U) },
@@ -444,9 +444,9 @@ struct Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_Stack
 		{ Z_Construct_UClass_AShooterPickup, AShooterPickup::StaticClass, TEXT("AShooterPickup"), &Z_Registration_Info_UClass_AShooterPickup, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterPickup), 3501270506U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterPickup_h__Script_StackAndShooter_2177948042(TEXT("/Script/StackAndShooter"),
-	Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterPickup_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterPickup_h__Script_StackAndShooter_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterPickup_h__Script_StackAndShooter_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_20woo_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterPickup_h__Script_StackAndShooter_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_USER_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterPickup_h__Script_StackAndShooter_2177948042(TEXT("/Script/StackAndShooter"),
+	Z_CompiledInDeferFile_FID_Users_USER_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterPickup_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_USER_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterPickup_h__Script_StackAndShooter_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_Users_USER_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterPickup_h__Script_StackAndShooter_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_USER_Documents_GitHub_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterPickup_h__Script_StackAndShooter_Statics::ScriptStructInfo),
 	nullptr, 0);
 // ********** End Registration *********************************************************************
 

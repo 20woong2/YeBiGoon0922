@@ -67,7 +67,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{826C10A8-DD1B-3001-8494-F6A5E91327A4}</ProjectGuid>
+    <ProjectGuid>{93A0EF2B-4BF7-3023-934C-497D9F5AF112}</ProjectGuid>
     <RootNamespace>StackAndShooter</RootNamespace>
   </PropertyGroup>
   <Import Project="UECommon.props" />
