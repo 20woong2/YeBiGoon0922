@@ -1,12 +1,12 @@
-"C:/Users/USER/Documents/GitHub/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Module.StackAndShooter.cpp"
-@"C:/Users/USER/Documents/GitHub/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/StackAndShooter.Shared.rsp"
-/FI"C:/Users/USER/Documents/GitHub/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
-/FI"C:/Users/USER/Documents/GitHub/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Definitions.StackAndShooter.h"
-/Yu"C:/Users/USER/Documents/GitHub/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
-/Fp"C:/Users/USER/Documents/GitHub/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.pch"
-/Fo"C:/Users/USER/Documents/GitHub/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Module.StackAndShooter.cpp.obj"
-/experimental:log "C:/Users/USER/Documents/GitHub/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Module.StackAndShooter.cpp.sarif"
-/sourceDependencies "C:/Users/USER/Documents/GitHub/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Module.StackAndShooter.cpp.dep.json"
+"C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Module.StackAndShooter.cpp"
+@"C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/StackAndShooter.Shared.rsp"
+/FI"C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
+/FI"C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Definitions.StackAndShooter.h"
+/Yu"C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
+/Fp"C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.pch"
+/Fo"C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Module.StackAndShooter.cpp.obj"
+/experimental:log "C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Module.StackAndShooter.cpp.sarif"
+/sourceDependencies "C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Module.StackAndShooter.cpp.dep.json"
 /Zc:inline
 /nologo
 /Oi
