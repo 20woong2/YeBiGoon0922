@@ -320,13 +320,13 @@ void AShooterCharacter::FellOutOfWorld(const class UDamageType& dmgType)
 {
 	// 원래 있던 Super::FellOutOfWorld(dmgType); 를 절대 적지 않습니다. (엔진의 즉사 기능을 여기서 끊어버립니다)
 
-	// 1. 딱 100 데미지만 입히기
+	//100 데미지 입히기
 	TakeDamage(100.0f, FDamageEvent(), nullptr, nullptr);
 
-	// 2. 만약 데미지를 받고도 피가 남아서 살아있다면?
+	// 만약 데미지를 받고도 피가 남아서 살아있다면
 	if (CurrentHP > 0.0f)
 	{
-		// 기억해둔 시작 위치로 텔레포트!
+		// 기억해둔 시작 위치로 텔레포트
 		SetActorLocation(InitialSpawnLoc);
 	}
 }
