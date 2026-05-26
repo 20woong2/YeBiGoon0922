@@ -87,6 +87,10 @@ protected:
 	UPROPERTY(EditAnywhere, Category="Refire")
 	bool bFullAuto = false;
 
+	// 총알이 날아가는 시간 (사거리 조절용)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Stats")
+	float BulletLifeTime = 3.0f;
+
 	/** Time between shots for this weapon. Affects both full auto and semi auto modes */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Refire", meta = (ClampMin = 0, ClampMax = 5, Units = "s"))
 	float RefireRate = 0.5f;

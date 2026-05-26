@@ -1,12 +1,13 @@
-"C:/UE_Projects/StackAndShooter/Source/StackAndShooter/Variant_Shooter/Weapons/ShooterWeapon.cpp"
-@"C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/StackAndShooter.Shared.rsp"
-/FI"C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
-/FI"C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Definitions.StackAndShooter.h"
-/Yu"C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
-/Fp"C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.pch"
-/Fo"C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/ShooterWeapon.cpp.obj"
-/experimental:log "C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/ShooterWeapon.cpp.sarif"
-/sourceDependencies "C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/ShooterWeapon.cpp.dep.json"
+"C:/Github/YeBiGoon0922/StackAndShooter/Source/StackAndShooter/Variant_Shooter/Weapons/ShooterWeapon.cpp"
+@"C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/StackAndShooter.Shared.rsp"
+/FI"C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
+/FI"C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Definitions.StackAndShooter.h"
+/Yu"C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
+/Fp"C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.pch"
+/Fo"C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/ShooterWeapon.cpp.obj"
+/experimental:log "C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/ShooterWeapon.cpp.sarif"
+/sourceDependencies "C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/ShooterWeapon.cpp.dep.json"
+/d2ssa-cfg-question-
 /Zc:inline
 /nologo
 /Oi

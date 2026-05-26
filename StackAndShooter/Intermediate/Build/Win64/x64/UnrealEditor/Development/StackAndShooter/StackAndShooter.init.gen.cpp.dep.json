@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\unreal\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\unrealeditor\\inc\\stackandshooter\\uht\\stackandshooter.init.gen.cpp",
+        "Source": "c:\\github\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\unrealeditor\\inc\\stackandshooter\\uht\\stackandshooter.init.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\unreal\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\x64\\stackandshootereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "PCH": "c:\\github\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\x64\\stackandshootereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
         "Includes": [
-            "c:\\unreal\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\stackandshooter\\definitions.stackandshooter.h"
+            "c:\\github\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\stackandshooter\\definitions.stackandshooter.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

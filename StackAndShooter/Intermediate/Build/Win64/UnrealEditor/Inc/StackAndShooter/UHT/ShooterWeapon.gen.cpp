@@ -447,6 +447,16 @@ struct Z_Construct_UClass_AShooterWeapon_Statics
 		{ "ToolTip", "If true, this weapon will automatically fire at the refire rate" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BulletLifeTime_MetaData[] = {
+		{ "Category", "Weapon Stats" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xec\xb4\x9d\xec\x95\x8c\xec\x9d\xb4 \xeb\x82\xa0\xec\x95\x84\xea\xb0\x80\xeb\x8a\x94 \xec\x8b\x9c\xea\xb0\x84 (\xec\x82\xac\xea\xb1\xb0\xeb\xa6\xac \xec\xa1\xb0\xec\xa0\x88\xec\x9a\xa9)\n" },
+#endif
+		{ "ModuleRelativePath", "Variant_Shooter/Weapons/ShooterWeapon.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xec\xb4\x9d\xec\x95\x8c\xec\x9d\xb4 \xeb\x82\xa0\xec\x95\x84\xea\xb0\x80\xeb\x8a\x94 \xec\x8b\x9c\xea\xb0\x84 (\xec\x82\xac\xea\xb1\xb0\xeb\xa6\xac \xec\xa1\xb0\xec\xa0\x88\xec\x9a\xa9)" },
+#endif
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RefireRate_MetaData[] = {
 		{ "Category", "Refire" },
 		{ "ClampMax", "5" },
@@ -563,6 +573,7 @@ struct Z_Construct_UClass_AShooterWeapon_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MuzzleOffset;
 	static void NewProp_bFullAuto_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bFullAuto;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_BulletLifeTime;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_RefireRate;
 	static void NewProp_bBurstFire_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bBurstFire;
@@ -611,6 +622,7 @@ void Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bFullAuto_SetBit(void* O
 	((AShooterWeapon*)Obj)->bFullAuto = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bFullAuto = { "bFullAuto", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AShooterWeapon), &Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bFullAuto_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bFullAuto_MetaData), NewProp_bFullAuto_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_BulletLifeTime = { "BulletLifeTime", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterWeapon, BulletLifeTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BulletLifeTime_MetaData), NewProp_BulletLifeTime_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterWeapon_Statics::NewProp_RefireRate = { "RefireRate", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterWeapon, RefireRate), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RefireRate_MetaData), NewProp_RefireRate_MetaData) };
 void Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bBurstFire_SetBit(void* Obj)
 {
@@ -643,6 +655,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AShooterW
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_MuzzleSocketName,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_MuzzleOffset,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bFullAuto,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_BulletLifeTime,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_RefireRate,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_bBurstFire,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterWeapon_Statics::NewProp_BurstCount,
@@ -687,14 +700,14 @@ AShooterWeapon::~AShooterWeapon() {}
 // ********** End Class AShooterWeapon *************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeapon_h__Script_StackAndShooter_Statics
+struct Z_CompiledInDeferFile_FID_Github_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeapon_h__Script_StackAndShooter_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterWeapon, AShooterWeapon::StaticClass, TEXT("AShooterWeapon"), &Z_Registration_Info_UClass_AShooterWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterWeapon), 152312915U) },
+		{ Z_Construct_UClass_AShooterWeapon, AShooterWeapon::StaticClass, TEXT("AShooterWeapon"), &Z_Registration_Info_UClass_AShooterWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterWeapon), 1789572313U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeapon_h__Script_StackAndShooter_71578056(TEXT("/Script/StackAndShooter"),
-	Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeapon_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeapon_h__Script_StackAndShooter_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Github_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeapon_h__Script_StackAndShooter_4167285395(TEXT("/Script/StackAndShooter"),
+	Z_CompiledInDeferFile_FID_Github_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeapon_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Github_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterWeapon_h__Script_StackAndShooter_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

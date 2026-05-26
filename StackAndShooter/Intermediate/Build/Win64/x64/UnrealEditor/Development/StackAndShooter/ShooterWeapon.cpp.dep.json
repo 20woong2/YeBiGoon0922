@@ -1,20 +1,20 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\ue_projects\\stackandshooter\\source\\stackandshooter\\variant_shooter\\weapons\\shooterweapon.cpp",
+        "Source": "c:\\github\\yebigoon0922\\stackandshooter\\source\\stackandshooter\\variant_shooter\\weapons\\shooterweapon.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\ue_projects\\stackandshooter\\intermediate\\build\\win64\\x64\\stackandshootereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "PCH": "c:\\github\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\x64\\stackandshootereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
         "Includes": [
-            "c:\\ue_projects\\stackandshooter\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\stackandshooter\\definitions.stackandshooter.h",
-            "c:\\ue_projects\\stackandshooter\\source\\stackandshooter\\variant_shooter\\weapons\\shooterweapon.h",
-            "c:\\ue_projects\\stackandshooter\\source\\stackandshooter\\variant_shooter\\weapons\\shooterweaponholder.h",
-            "c:\\ue_projects\\stackandshooter\\intermediate\\build\\win64\\unrealeditor\\inc\\stackandshooter\\uht\\shooterweaponholder.generated.h",
-            "c:\\ue_projects\\stackandshooter\\intermediate\\build\\win64\\unrealeditor\\inc\\stackandshooter\\uht\\shooterweapon.generated.h",
+            "c:\\github\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\stackandshooter\\definitions.stackandshooter.h",
+            "c:\\github\\yebigoon0922\\stackandshooter\\source\\stackandshooter\\variant_shooter\\weapons\\shooterweapon.h",
+            "c:\\github\\yebigoon0922\\stackandshooter\\source\\stackandshooter\\variant_shooter\\weapons\\shooterweaponholder.h",
+            "c:\\github\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\unrealeditor\\inc\\stackandshooter\\uht\\shooterweaponholder.generated.h",
+            "c:\\github\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\unrealeditor\\inc\\stackandshooter\\uht\\shooterweapon.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetmathlibrary.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl",
-            "c:\\ue_projects\\stackandshooter\\source\\stackandshooter\\variant_shooter\\weapons\\shooterprojectile.h",
-            "c:\\ue_projects\\stackandshooter\\intermediate\\build\\win64\\unrealeditor\\inc\\stackandshooter\\uht\\shooterprojectile.generated.h"
+            "c:\\github\\yebigoon0922\\stackandshooter\\source\\stackandshooter\\variant_shooter\\weapons\\shooterprojectile.h",
+            "c:\\github\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\unrealeditor\\inc\\stackandshooter\\uht\\shooterprojectile.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

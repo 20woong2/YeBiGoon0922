@@ -177,6 +177,11 @@ void AShooterWeapon::FireProjectile(const FVector& TargetLocation)
 		SpawnParams.Instigator = PawnOwner;
 
 		AShooterProjectile* Projectile = GetWorld()->SpawnActor<AShooterProjectile>(ProjectileClass, ProjectileTransform, SpawnParams);
+		if (Projectile)
+		{
+			// 헤더에서 만든 BulletLifeTime 만큼만 살고 사라지게 합니다.
+			Projectile->SetLifeSpan(BulletLifeTime);
+		}
 		if (i != PelletCount - 1)
 		{
 			--CurrentBullets;
