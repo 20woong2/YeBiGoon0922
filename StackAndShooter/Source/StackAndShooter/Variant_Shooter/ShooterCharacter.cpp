@@ -91,12 +91,12 @@ float AShooterCharacter::TakeDamage(float Damage, struct FDamageEvent const& Dam
 			Damage = Damage * AttackerChar->DamageMultiplier;
 		}
 	}
-
-	// 3. Super 호출 (수정된 Damage를 엔진에 넘겨서 제대로 소문내기!)
-	float ActualDamage = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
-
 	// 4. 엔진이 확정한 최종 데미지로 내 체력 깎기
-	CurrentHP -= ActualDamage;
+	CurrentHP -= Damage;
+	// 3. Super 호출 (수정된 Damage를 엔진에 넘겨서 제대로 소문내기!)
+	Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+
+	
 
 	OnDamaged.Broadcast(FMath::Max(0.0f, CurrentHP / MaxHP));
 	// 5. 사망 판정
@@ -105,7 +105,7 @@ float AShooterCharacter::TakeDamage(float Damage, struct FDamageEvent const& Dam
 		Die();
 	}
 
-	return ActualDamage;
+	return Damage;
 }
 
 void AShooterCharacter::DoStartFiring()
@@ -391,5 +391,14 @@ void AShooterCharacter::FellOutOfWorld(const class UDamageType& dmgType)
 	{
 		// 기억해둔 시작 위치로 텔레포트
 		SetActorLocation(InitialSpawnLoc);
+	}
+}
+
+void AShooterCharacter::ForceUpdateWeaponHUD()
+{
+	// 현재 무기를 안전하게 들고 있다면, 그 무기의 맥스 탄창과 현재 총알을 UI에 방송합니다!
+	if (IsValid(CurrentWeapon))
+	{
+		OnBulletCountUpdated.Broadcast(CurrentWeapon->GetMagazineSize(), CurrentWeapon->GetBulletCount());
 	}
 }

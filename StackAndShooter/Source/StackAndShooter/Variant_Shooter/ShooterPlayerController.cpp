@@ -16,40 +16,7 @@ void AShooterPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// only spawn touch controls on local player controllers
-	if (IsLocalPlayerController())
-	{
-		if (SVirtualJoystick::ShouldDisplayTouchInterface())
-		{
-			// spawn the mobile controls widget
-			MobileControlsWidget = CreateWidget<UUserWidget>(this, MobileControlsWidgetClass);
-
-			if (MobileControlsWidget)
-			{
-				// add the controls to the player screen
-				MobileControlsWidget->AddToPlayerScreen(0);
-
-			} else {
-
-				UE_LOG(LogStackAndShooter, Error, TEXT("Could not spawn mobile controls widget."));
-
-			}
-		}
-
-		// create the bullet counter widget and add it to the screen
-		BulletCounterUI = CreateWidget<UShooterBulletCounterUI>(this, BulletCounterUIClass);
-
-		if (BulletCounterUI)
-		{
-			BulletCounterUI->AddToPlayerScreen(0);
-
-		} else {
-
-			UE_LOG(LogStackAndShooter, Error, TEXT("Could not spawn bullet counter widget."));
-
-		}
-		
-	}
+	
 }
 
 void AShooterPlayerController::SetupInputComponent()
@@ -81,6 +48,57 @@ void AShooterPlayerController::OnPossess(APawn* InPawn)
 {
 	Super::OnPossess(InPawn);
 
+	// only spawn touch controls on local player controllers
+	if (IsLocalPlayerController())
+	{
+		if (SVirtualJoystick::ShouldDisplayTouchInterface())
+		{
+			// spawn the mobile controls widget
+			MobileControlsWidget = CreateWidget<UUserWidget>(this, MobileControlsWidgetClass);
+
+			if (MobileControlsWidget)
+			{
+				// add the controls to the player screen
+				MobileControlsWidget->AddToPlayerScreen(0);
+
+			}
+			else {
+
+				UE_LOG(LogStackAndShooter, Error, TEXT("Could not spawn mobile controls widget."));
+
+			}
+		}
+
+		// create the bullet counter widget and add it to the screen
+		BulletCounterUI = CreateWidget<UShooterBulletCounterUI>(this, BulletCounterUIClass);
+
+		if (BulletCounterUI)
+		{
+			BulletCounterUI->AddToPlayerScreen(0);
+
+		}
+		else {
+
+			UE_LOG(LogStackAndShooter, Error, TEXT("Could not spawn bullet counter widget."));
+
+		}
+
+	}
+
+	if (AShooterCharacter* ShooterCharacter = Cast<AShooterCharacter>(InPawn))
+	{
+		ShooterCharacter->Tags.Add(PlayerPawnTag);
+		ShooterCharacter->OnBulletCountUpdated.AddDynamic(this, &AShooterPlayerController::OnBulletCountUpdated);
+		ShooterCharacter->OnDamaged.AddDynamic(this, &AShooterPlayerController::OnPawnDamaged);
+
+		// 1. 체력바 강제 업데이트 (기존 코드)
+		ShooterCharacter->OnDamaged.Broadcast(1.0f);
+
+		// 🚀 2. 여기에 추가: 방금 만든 총알 UI 강제 업데이트 함수 호출!
+		ShooterCharacter->ForceUpdateWeaponHUD();
+	}
+
+
 	// subscribe to the pawn's OnDestroyed delegate
 	InPawn->OnDestroyed.AddDynamic(this, &AShooterPlayerController::OnPawnDestroyed);
 
@@ -102,7 +120,10 @@ void AShooterPlayerController::OnPossess(APawn* InPawn)
 void AShooterPlayerController::OnPawnDestroyed(AActor* DestroyedActor)
 {
 	// reset the bullet counter HUD
-	BulletCounterUI->BP_UpdateBulletCounter(0, 0);
+	if (IsValid(BulletCounterUI))
+	{
+		BulletCounterUI->BP_UpdateBulletCounter(0, 0);
+	}
 
 	// find the player start
 	TArray<AActor*> ActorList;

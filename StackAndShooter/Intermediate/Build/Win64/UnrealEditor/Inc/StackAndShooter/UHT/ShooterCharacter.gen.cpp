@@ -341,6 +341,42 @@ DEFINE_FUNCTION(AShooterCharacter::execHeal)
 }
 // ********** End Class AShooterCharacter Function Heal ********************************************
 
+// ********** Begin Class AShooterCharacter Function OnRespawn *************************************
+struct Z_Construct_UFunction_AShooterCharacter_OnRespawn_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Respawn" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Called from the respawn timer to destroy this character and force the PC to respawn */" },
+#endif
+		{ "ModuleRelativePath", "Variant_Shooter/ShooterCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Called from the respawn timer to destroy this character and force the PC to respawn" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AShooterCharacter_OnRespawn_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AShooterCharacter, nullptr, "OnRespawn", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_OnRespawn_Statics::Function_MetaDataParams), Z_Construct_UFunction_AShooterCharacter_OnRespawn_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_AShooterCharacter_OnRespawn()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShooterCharacter_OnRespawn_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AShooterCharacter::execOnRespawn)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRespawn();
+	P_NATIVE_END;
+}
+// ********** End Class AShooterCharacter Function OnRespawn ***************************************
+
 // ********** Begin Class AShooterCharacter Function ResetHP ***************************************
 struct Z_Construct_UFunction_AShooterCharacter_ResetHP_Statics
 {
@@ -434,6 +470,7 @@ void AShooterCharacter::StaticRegisterNativesAShooterCharacter()
 		{ "DoStopFiring", &AShooterCharacter::execDoStopFiring },
 		{ "DoSwitchWeapon", &AShooterCharacter::execDoSwitchWeapon },
 		{ "Heal", &AShooterCharacter::execHeal },
+		{ "OnRespawn", &AShooterCharacter::execOnRespawn },
 		{ "ResetHP", &AShooterCharacter::execResetHP },
 		{ "UpdateWeaponHUD", &AShooterCharacter::execUpdateWeaponHUD },
 	};
@@ -637,6 +674,7 @@ struct Z_Construct_UClass_AShooterCharacter_Statics
 		{ &Z_Construct_UFunction_AShooterCharacter_DoStopFiring, "DoStopFiring" }, // 1034790919
 		{ &Z_Construct_UFunction_AShooterCharacter_DoSwitchWeapon, "DoSwitchWeapon" }, // 2695605878
 		{ &Z_Construct_UFunction_AShooterCharacter_Heal, "Heal" }, // 34580019
+		{ &Z_Construct_UFunction_AShooterCharacter_OnRespawn, "OnRespawn" }, // 161637164
 		{ &Z_Construct_UFunction_AShooterCharacter_ResetHP, "ResetHP" }, // 299512639
 		{ &Z_Construct_UFunction_AShooterCharacter_UpdateWeaponHUD, "UpdateWeaponHUD" }, // 369163713
 	};
@@ -715,10 +753,10 @@ AShooterCharacter::~AShooterCharacter() {}
 struct Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 3692650313U) },
+		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 969389184U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_773774026(TEXT("/Script/StackAndShooter"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_1718487746(TEXT("/Script/StackAndShooter"),
 	Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

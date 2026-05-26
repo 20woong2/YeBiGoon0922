@@ -87,6 +87,9 @@ public:
 	// 기본값은 반드시 1.0f 이어야 원래 데미지가 들어갑니다!
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Stats")
 	float DamageMultiplier = 1.0f;
+
+	// UI에 총알 정보를 강제로 새로고침 시키는 함수
+	void ForceUpdateWeaponHUD();
 public:
 
 	/** Bullet count updated delegate */
@@ -188,5 +191,6 @@ protected:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Events")
 	void BP_OnRespawn();
 	/** Called from the respawn timer to destroy this character and force the PC to respawn */
+	UFUNCTION(BlueprintCallable, Category = "Respawn")
 	void OnRespawn();
 };

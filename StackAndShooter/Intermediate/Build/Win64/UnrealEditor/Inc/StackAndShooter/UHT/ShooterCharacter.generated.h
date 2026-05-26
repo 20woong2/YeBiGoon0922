@@ -32,6 +32,7 @@ STACKANDSHOOTER_API void FDamagedDelegate_DelegateWrapper(const FMulticastScript
 
 // ********** Begin Class AShooterCharacter ********************************************************
 #define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnRespawn); \
 	DECLARE_FUNCTION(execUpdateWeaponHUD); \
 	DECLARE_FUNCTION(execHeal); \
 	DECLARE_FUNCTION(execDoSwitchWeapon); \
