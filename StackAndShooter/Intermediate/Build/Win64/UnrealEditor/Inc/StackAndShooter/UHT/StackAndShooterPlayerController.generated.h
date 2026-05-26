@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class AStackAndShooterPlayerController *****************************************
 STACKANDSHOOTER_API UClass* Z_Construct_UClass_AStackAndShooterPlayerController_NoRegister();
 
-#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterPlayerController_h_20_INCLASS_NO_PURE_DECLS \
+#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterPlayerController_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAStackAndShooterPlayerController(); \
 	friend struct Z_Construct_UClass_AStackAndShooterPlayerController_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(AStackAndShooterPlayerController)
 
 
-#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterPlayerController_h_20_ENHANCED_CONSTRUCTORS \
+#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterPlayerController_h_20_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AStackAndShooterPlayerController(AStackAndShooterPlayerController&&) = delete; \
 	AStackAndShooterPlayerController(const AStackAndShooterPlayerController&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~AStackAndShooterPlayerController();
 
 
-#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterPlayerController_h_17_PROLOG
-#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterPlayerController_h_20_GENERATED_BODY \
+#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterPlayerController_h_17_PROLOG
+#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterPlayerController_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterPlayerController_h_20_INCLASS_NO_PURE_DECLS \
-	FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterPlayerController_h_20_ENHANCED_CONSTRUCTORS \
+	FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterPlayerController_h_20_INCLASS_NO_PURE_DECLS \
+	FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterPlayerController_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -55,6 +55,6 @@ class AStackAndShooterPlayerController;
 // ********** End Class AStackAndShooterPlayerController *******************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterPlayerController_h
+#define CURRENT_FILE_ID FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterPlayerController_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

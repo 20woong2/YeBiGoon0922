@@ -26,6 +26,11 @@ public:
 
 protected:
 
+	// 0.2초 지연 후 UI를 생성할 함수
+	void SpawnMobileControls();
+
+	// 타이머를 관리할 핸들
+	FTimerHandle MobileControlsTimerHandle;
 	/** Input Mapping Contexts */
 	UPROPERTY(EditAnywhere, Category="Input|Input Mappings")
 	TArray<UInputMappingContext*> DefaultMappingContexts;

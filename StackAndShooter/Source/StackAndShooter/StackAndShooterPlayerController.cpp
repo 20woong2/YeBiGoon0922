@@ -20,9 +20,13 @@ void AStackAndShooterPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	
-	// only spawn touch controls on local player controllers
-	if (SVirtualJoystick::ShouldDisplayTouchInterface() && IsLocalPlayerController())
+	// [수정] 게임 시작하자마자 바로 만들지 말고, 0.2초 뒤에 SpawnMobileControls 함수를 실행해라!
+	GetWorld()->GetTimerManager().SetTimer(MobileControlsTimerHandle, this, &AStackAndShooterPlayerController::SpawnMobileControls, 0.2f, false);
+}
+void AStackAndShooterPlayerController::SpawnMobileControls()
+{
+	// GetLocalPlayer()가 완벽하게 붙었는지(null이 아닌지) 한 번 더 체크하는 철벽 안전장치!
+	if (SVirtualJoystick::ShouldDisplayTouchInterface() && IsLocalPlayerController() && GetLocalPlayer() != nullptr)
 	{
 		// spawn the mobile controls widget
 		MobileControlsWidget = CreateWidget<UUserWidget>(this, MobileControlsWidgetClass);
@@ -31,13 +35,11 @@ void AStackAndShooterPlayerController::BeginPlay()
 		{
 			// add the controls to the player screen
 			MobileControlsWidget->AddToPlayerScreen(0);
-
-		} else {
-
-			UE_LOG(LogStackAndShooter, Error, TEXT("Could not spawn mobile controls widget."));
-
 		}
-
+		else
+		{
+			UE_LOG(LogStackAndShooter, Error, TEXT("Could not spawn mobile controls widget."));
+		}
 	}
 }
 

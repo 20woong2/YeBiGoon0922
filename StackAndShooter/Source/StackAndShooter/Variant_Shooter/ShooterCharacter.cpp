@@ -13,6 +13,8 @@
 #include "TimerManager.h"
 #include "ShooterGameMode.h"
 #include "Engine/DamageEvents.h"
+#include "GameFramework/PlayerStart.h"
+#include "Kismet/GameplayStatics.h"
 
 AShooterCharacter::AShooterCharacter()
 {
@@ -291,8 +293,58 @@ void AShooterCharacter::Die()
 
 void AShooterCharacter::OnRespawn()
 {
-	// destroy the character to force the PC to respawn
-	Destroy();
+	BP_OnRespawn();
+	// 1. 입력과 움직임을 다시 활성화합니다. (Die에서 막았던 것 복구)
+	EnableInput(Cast<APlayerController>(GetController()));
+	GetCharacterMovement()->SetMovementMode(MOVE_Walking);
+
+	// 2. 체력(Health)을 다시 최대치로 채워줍니다.
+	// (🚨주의: 유저님의 실제 체력 변수명과 최대 체력 변수명으로 수정해 주세요!)
+	ResetHP();
+
+	// 3. 맵에 있는 PlayerStart(시작 지점)를 찾아서 그곳으로 텔레포트 시킵니다.
+	APlayerController* PC = Cast<APlayerController>(GetController());
+
+	// 이 캐릭터가 1P인지 2P인지 번호를 확인합니다. (1P는 0, 2P는 1)
+	int32 PlayerIndex = UGameplayStatics::GetPlayerControllerID(PC);
+
+	// 1P면 "P1", 2P면 "P2" 라는 명찰을 타겟으로 정합니다.
+	FName TargetTag = (PlayerIndex == 0) ? FName("P1") : FName("P2");
+
+	TArray<AActor*> PlayerStarts;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APlayerStart::StaticClass(), PlayerStarts);
+
+	bool bFoundSpot = false;
+
+	for (AActor* StartSpot : PlayerStarts)
+	{
+		// 스폰 지점의 명찰(Tag)이 내 타겟 명찰과 똑같은지 확인합니다!
+		if (StartSpot->ActorHasTag(TargetTag))
+		{
+			FVector SafeLocation = StartSpot->GetActorLocation();
+			SafeLocation.Z += 100.0f; // 바닥 끼임 방지를 위해 살짝 띄움
+
+			SetActorLocation(SafeLocation);
+			bFoundSpot = true;
+			break; // 내 자리를 찾았으니 탐색을 즉시 종료합니다!
+		}
+	}
+
+	// 만약 실수로 맵에 명찰을 안 달아뒀을 경우를 대비한 안전장치
+	if (!bFoundSpot)
+	{
+		FVector FallbackLocation = GetActorLocation();
+		FallbackLocation.Z += 1000.0f;
+		SetActorLocation(FallbackLocation);
+	}
+
+	// 5. 숨겨뒀던 무기를 다시 꺼내서 장착합니다!
+	if (IsValid(CurrentWeapon))
+	{
+		// Die()에 있던 Deactivate의 반대 함수를 실행합니다.
+		CurrentWeapon->ActivateWeapon();
+	}
+	
 }
 
 void AShooterCharacter::Heal(float HealAmount)

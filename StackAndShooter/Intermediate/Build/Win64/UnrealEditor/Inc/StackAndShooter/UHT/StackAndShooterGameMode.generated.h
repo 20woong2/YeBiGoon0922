@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class AStackAndShooterGameMode *************************************************
 STACKANDSHOOTER_API UClass* Z_Construct_UClass_AStackAndShooterGameMode_NoRegister();
 
-#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterGameMode_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterGameMode_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAStackAndShooterGameMode(); \
 	friend struct Z_Construct_UClass_AStackAndShooterGameMode_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(AStackAndShooterGameMode)
 
 
-#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterGameMode_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterGameMode_h_15_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AStackAndShooterGameMode(AStackAndShooterGameMode&&) = delete; \
 	AStackAndShooterGameMode(const AStackAndShooterGameMode&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~AStackAndShooterGameMode();
 
 
-#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterGameMode_h_12_PROLOG
-#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterGameMode_h_15_GENERATED_BODY \
+#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterGameMode_h_12_PROLOG
+#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterGameMode_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterGameMode_h_15_INCLASS_NO_PURE_DECLS \
-	FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterGameMode_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterGameMode_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterGameMode_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -55,6 +55,6 @@ class AStackAndShooterGameMode;
 // ********** End Class AStackAndShooterGameMode ***************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterGameMode_h
+#define CURRENT_FILE_ID FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterGameMode_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

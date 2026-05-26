@@ -155,6 +155,35 @@ UFunction* Z_Construct_UFunction_AShooterCharacter_BP_OnDeath()
 }
 // ********** End Class AShooterCharacter Function BP_OnDeath **************************************
 
+// ********** Begin Class AShooterCharacter Function BP_OnRespawn **********************************
+static FName NAME_AShooterCharacter_BP_OnRespawn = FName(TEXT("BP_OnRespawn"));
+void AShooterCharacter::BP_OnRespawn()
+{
+	UFunction* Func = FindFunctionChecked(NAME_AShooterCharacter_BP_OnRespawn);
+	ProcessEvent(Func,NULL);
+}
+struct Z_Construct_UFunction_AShooterCharacter_BP_OnRespawn_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Events" },
+		{ "ModuleRelativePath", "Variant_Shooter/ShooterCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AShooterCharacter_BP_OnRespawn_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AShooterCharacter, nullptr, "BP_OnRespawn", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_BP_OnRespawn_Statics::Function_MetaDataParams), Z_Construct_UFunction_AShooterCharacter_BP_OnRespawn_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_AShooterCharacter_BP_OnRespawn()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShooterCharacter_BP_OnRespawn_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// ********** End Class AShooterCharacter Function BP_OnRespawn ************************************
+
 // ********** Begin Class AShooterCharacter Function DoStartFiring *********************************
 struct Z_Construct_UFunction_AShooterCharacter_DoStartFiring_Statics
 {
@@ -603,6 +632,7 @@ struct Z_Construct_UClass_AShooterCharacter_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_AShooterCharacter_BP_OnDeath, "BP_OnDeath" }, // 3587027520
+		{ &Z_Construct_UFunction_AShooterCharacter_BP_OnRespawn, "BP_OnRespawn" }, // 2164973067
 		{ &Z_Construct_UFunction_AShooterCharacter_DoStartFiring, "DoStartFiring" }, // 3772532036
 		{ &Z_Construct_UFunction_AShooterCharacter_DoStopFiring, "DoStopFiring" }, // 1034790919
 		{ &Z_Construct_UFunction_AShooterCharacter_DoSwitchWeapon, "DoSwitchWeapon" }, // 2695605878
@@ -682,14 +712,14 @@ AShooterCharacter::~AShooterCharacter() {}
 // ********** End Class AShooterCharacter **********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics
+struct Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 1692388484U) },
+		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 3692650313U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_1632034470(TEXT("/Script/StackAndShooter"),
-	Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_773774026(TEXT("/Script/StackAndShooter"),
+	Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

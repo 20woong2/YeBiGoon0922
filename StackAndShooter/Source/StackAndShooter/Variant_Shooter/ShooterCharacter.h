@@ -185,7 +185,8 @@ protected:
 	/** Called to allow Blueprint code to react to this character's death */
 	UFUNCTION(BlueprintImplementableEvent, Category="Shooter", meta = (DisplayName = "On Death"))
 	void BP_OnDeath();
-
+	UFUNCTION(BlueprintImplementableEvent, Category = "Events")
+	void BP_OnRespawn();
 	/** Called from the respawn timer to destroy this character and force the PC to respawn */
 	void OnRespawn();
 };
