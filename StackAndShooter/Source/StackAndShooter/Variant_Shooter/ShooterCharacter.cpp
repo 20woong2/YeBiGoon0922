@@ -318,9 +318,8 @@ void AShooterCharacter::ResetHP()
 
 void AShooterCharacter::FellOutOfWorld(const class UDamageType& dmgType)
 {
-	
-	//이미 피가 0 이하(사망 상태)라면 무시
-	if (CurrentHP <= 0.0f) return;
+	// 원래 있던 Super::FellOutOfWorld(dmgType); 를 절대 적지 않습니다. (엔진의 즉사 기능을 여기서 끊어버립니다)
+
 	//100 데미지 입히기
 	TakeDamage(100.0f, FDamageEvent(), nullptr, nullptr);
 
