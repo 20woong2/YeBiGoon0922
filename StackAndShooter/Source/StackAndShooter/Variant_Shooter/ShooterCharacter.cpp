@@ -77,24 +77,35 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 
 float AShooterCharacter::TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
-	// ignore if already dead
+	// 1. 죽었는지 확인 (여기서 걸러내야 Super가 헛발질을 안 합니다)
 	if (CurrentHP <= 0.0f)
 	{
 		return 0.0f;
 	}
 
-	// Reduce HP
-	CurrentHP -= Damage;
+	// 2. 데미지 뻥튀기 계산 (먼저 데미지 수치 자체를 수정!)
+	if (EventInstigator && EventInstigator->GetPawn())
+	{
+		if (AShooterCharacter* AttackerChar = Cast<AShooterCharacter>(EventInstigator->GetPawn()))
+		{
+			Damage = Damage * AttackerChar->DamageMultiplier;
+		}
+	}
 
-	// Have we depleted HP?
+	// 3. Super 호출 (수정된 Damage를 엔진에 넘겨서 제대로 소문내기!)
+	float ActualDamage = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+
+	// 4. 엔진이 확정한 최종 데미지로 내 체력 깎기
+	CurrentHP -= ActualDamage;
+
+	OnDamaged.Broadcast(FMath::Max(0.0f, CurrentHP / MaxHP));
+	// 5. 사망 판정
 	if (CurrentHP <= 0.0f)
 	{
 		Die();
 	}
 
-	// update the HUD
-	OnDamaged.Broadcast(FMath::Max(0.0f, CurrentHP / MaxHP));
-	return Damage;
+	return ActualDamage;
 }
 
 void AShooterCharacter::DoStartFiring()

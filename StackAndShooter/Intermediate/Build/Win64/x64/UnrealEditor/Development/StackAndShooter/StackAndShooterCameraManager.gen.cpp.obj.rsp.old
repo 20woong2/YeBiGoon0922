@@ -1,12 +1,13 @@
-"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/UnrealEditor/Inc/StackAndShooter/UHT/StackAndShooterCameraManager.gen.cpp"
-@"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/StackAndShooter.Shared.rsp"
-/FI"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
-/FI"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Definitions.StackAndShooter.h"
-/Yu"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
-/Fp"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.pch"
-/Fo"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/StackAndShooterCameraManager.gen.cpp.obj"
-/experimental:log "C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/StackAndShooterCameraManager.gen.cpp.sarif"
-/sourceDependencies "C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/StackAndShooterCameraManager.gen.cpp.dep.json"
+"C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/UnrealEditor/Inc/StackAndShooter/UHT/StackAndShooterCameraManager.gen.cpp"
+@"C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/StackAndShooter.Shared.rsp"
+/FI"C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
+/FI"C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Definitions.StackAndShooter.h"
+/Yu"C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
+/Fp"C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.pch"
+/Fo"C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/StackAndShooterCameraManager.gen.cpp.obj"
+/experimental:log "C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/StackAndShooterCameraManager.gen.cpp.sarif"
+/sourceDependencies "C:/Github/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/StackAndShooterCameraManager.gen.cpp.dep.json"
+/d2ssa-cfg-question-
 /Zc:inline
 /nologo
 /Oi
