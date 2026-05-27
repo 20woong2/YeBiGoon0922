@@ -1,13 +1,13 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\unreal\\yebigoon0922\\stackandshooter\\source\\stackandshooter\\stackandshooterplayercontroller.cpp",
+        "Source": "c:\\ue_projects\\stackandshooter\\source\\stackandshooter\\stackandshooterplayercontroller.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\unreal\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\x64\\stackandshootereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "PCH": "c:\\ue_projects\\stackandshooter\\intermediate\\build\\win64\\x64\\stackandshootereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
         "Includes": [
-            "c:\\unreal\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\stackandshooter\\definitions.stackandshooter.h",
-            "c:\\unreal\\yebigoon0922\\stackandshooter\\source\\stackandshooter\\stackandshooterplayercontroller.h",
-            "c:\\unreal\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\unrealeditor\\inc\\stackandshooter\\uht\\stackandshooterplayercontroller.generated.h",
+            "c:\\ue_projects\\stackandshooter\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\stackandshooter\\definitions.stackandshooter.h",
+            "c:\\ue_projects\\stackandshooter\\source\\stackandshooter\\stackandshooterplayercontroller.h",
+            "c:\\ue_projects\\stackandshooter\\intermediate\\build\\win64\\unrealeditor\\inc\\stackandshooter\\uht\\stackandshooterplayercontroller.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedinputsubsystems.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedinputsubsysteminterface.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedplayerinput.h",
@@ -36,8 +36,8 @@
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedactionkeymapping.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedactionkeymapping.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputmappingcontext.generated.h",
-            "c:\\unreal\\yebigoon0922\\stackandshooter\\source\\stackandshooter\\stackandshootercameramanager.h",
-            "c:\\unreal\\yebigoon0922\\stackandshooter\\intermediate\\build\\win64\\unrealeditor\\inc\\stackandshooter\\uht\\stackandshootercameramanager.generated.h",
+            "c:\\ue_projects\\stackandshooter\\source\\stackandshooter\\stackandshootercameramanager.h",
+            "c:\\ue_projects\\stackandshooter\\intermediate\\build\\win64\\unrealeditor\\inc\\stackandshooter\\uht\\stackandshootercameramanager.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\umg\\public\\blueprint\\userwidget.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\umg\\public\\blueprint\\umgsequenceplaymode.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\umgsequenceplaymode.generated.h",
@@ -107,7 +107,7 @@
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\moviescene\\public\\entitysystem\\relativeptr.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\moviescene\\public\\evaluation\\moviescenepreanimatedstate.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\userwidget.generated.h",
-            "c:\\unreal\\yebigoon0922\\stackandshooter\\source\\stackandshooter\\stackandshooter.h",
+            "c:\\ue_projects\\stackandshooter\\source\\stackandshooter\\stackandshooter.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\slate\\public\\widgets\\input\\svirtualjoystick.h"
         ],
         "ImportedModules": [],

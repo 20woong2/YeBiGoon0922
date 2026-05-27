@@ -171,7 +171,17 @@ void AShooterCharacter::AttachWeaponMeshes(AShooterWeapon* Weapon)
 
 void AShooterCharacter::PlayFiringMontage(UAnimMontage* Montage)
 {
-	
+	// 1. 내 눈에 보이는 1인칭 팔 메쉬에서 총기 발사 몽타주 재생
+	if (GetFirstPersonMesh() && GetFirstPersonMesh()->GetAnimInstance() && Montage)
+	{
+		GetFirstPersonMesh()->GetAnimInstance()->Montage_Play(Montage);
+	}
+
+	// 2. 분할 화면이나 남의 눈에 보이는 3인칭 전신 메쉬에서도 동시에 몽타주 재생
+	if (GetMesh() && GetMesh()->GetAnimInstance() && Montage)
+	{
+		GetMesh()->GetAnimInstance()->Montage_Play(Montage);
+	}
 }
 
 void AShooterCharacter::AddWeaponRecoil(float Recoil)
@@ -347,6 +357,12 @@ void AShooterCharacter::OnRespawn()
 		FVector FallbackLocation = GetActorLocation();
 		FallbackLocation.Z += 1000.0f;
 		SetActorLocation(FallbackLocation);
+	}
+	
+	if (GetMesh())
+	{
+		// 원래 기본값인 -90도에서 유저님이 돌리셨던 최종 각도 수치(예: -110.0f)를 아래에 적어줍니다.
+		GetMesh()->SetRelativeRotation(FRotator(0.0f, -70.0f, 0.0f));
 	}
 
 	// 5. 숨겨뒀던 무기를 다시 꺼내서 장착합니다!

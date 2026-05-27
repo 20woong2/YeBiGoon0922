@@ -10,5 +10,7 @@
 "C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Module.StackAndShooter.cpp.obj"
 "C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/ShooterCharacter.cpp.obj"
 "C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/ShooterPlayerController.cpp.obj"
+"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/ShooterCharacter.gen.cpp.obj"
+"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/StackAndShooter.init.gen.cpp.obj"
 "C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/Default.rc2.res"
 /OUT:"C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/UnrealEditor/Development/StackAndShooter/UnrealEditor-StackAndShooter.lib"

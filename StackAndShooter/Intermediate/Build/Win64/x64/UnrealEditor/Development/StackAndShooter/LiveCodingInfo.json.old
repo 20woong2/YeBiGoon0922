@@ -9,7 +9,6 @@
 			"HorrorUI.gen.cpp.obj",
 			"ShooterAIController.gen.cpp.obj",
 			"ShooterBulletCounterUI.gen.cpp.obj",
-			"ShooterCharacter.gen.cpp.obj",
 			"ShooterGameMode.gen.cpp.obj",
 			"ShooterNPC.gen.cpp.obj",
 			"ShooterPickup.gen.cpp.obj",
@@ -19,7 +18,6 @@
 			"ShooterUI.gen.cpp.obj",
 			"ShooterWeapon.gen.cpp.obj",
 			"ShooterWeaponHolder.gen.cpp.obj",
-			"StackAndShooter.init.gen.cpp.obj",
 			"StackAndShooterCameraManager.gen.cpp.obj",
 			"StackAndShooterCharacter.gen.cpp.obj",
 			"StackAndShooterGameMode.gen.cpp.obj",
@@ -45,6 +43,8 @@
 			"ShooterProjectile.cpp.obj",
 			"ShooterWeapon.cpp.obj",
 			"ShooterWeaponHolder.cpp.obj",
+			"ShooterCharacter.gen.cpp.obj",
+			"StackAndShooter.init.gen.cpp.obj",
 			"ShooterCharacter.cpp.obj",
 			"ShooterPlayerController.cpp.obj"
 		]

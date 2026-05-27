@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class AStackAndShooterCharacter ************************************************
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execDoJumpEnd); \
 	DECLARE_FUNCTION(execDoJumpStart); \
 	DECLARE_FUNCTION(execDoMove); \
@@ -26,7 +26,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 STACKANDSHOOTER_API UClass* Z_Construct_UClass_AStackAndShooterCharacter_NoRegister();
 
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_24_INCLASS_NO_PURE_DECLS \
+#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAStackAndShooterCharacter(); \
 	friend struct Z_Construct_UClass_AStackAndShooterCharacter_Statics; \
@@ -37,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(AStackAndShooterCharacter)
 
 
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_24_ENHANCED_CONSTRUCTORS \
+#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_24_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AStackAndShooterCharacter(AStackAndShooterCharacter&&) = delete; \
 	AStackAndShooterCharacter(const AStackAndShooterCharacter&) = delete; \
@@ -47,13 +47,13 @@ public: \
 	NO_API virtual ~AStackAndShooterCharacter();
 
 
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_21_PROLOG
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_24_GENERATED_BODY \
+#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_21_PROLOG
+#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_24_INCLASS_NO_PURE_DECLS \
-	FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_24_ENHANCED_CONSTRUCTORS \
+	FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_24_INCLASS_NO_PURE_DECLS \
+	FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -63,6 +63,6 @@ class AStackAndShooterCharacter;
 // ********** End Class AStackAndShooterCharacter **************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h
+#define CURRENT_FILE_ID FID_UE_Projects_StackAndShooter_Source_StackAndShooter_StackAndShooterCharacter_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
