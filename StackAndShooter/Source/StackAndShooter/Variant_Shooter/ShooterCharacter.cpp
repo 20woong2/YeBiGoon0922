@@ -290,12 +290,6 @@ void AShooterCharacter::Die()
 		CurrentWeapon->DeactivateWeapon();
 	}
 
-	// increment the team score
-	if (AShooterGameMode* GM = Cast<AShooterGameMode>(GetWorld()->GetAuthGameMode()))
-	{
-		GM->IncrementTeamScore(TeamByte);
-	}
-		
 	// stop character movement
 	GetCharacterMovement()->StopMovementImmediately();
 

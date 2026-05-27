@@ -1,3 +1,0 @@
-Breadcrumbs 'RHIThread'
- - RenderGraphExecute - UpdateAllPrimitiveSceneInfos
- - Frame 85927

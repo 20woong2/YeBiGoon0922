@@ -5,8 +5,8 @@
       <Configuration>Invalid</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Win64_x64_DebugGame|x64">
-      <Configuration>Win64_x64_DebugGame</Configuration>
+    <ProjectConfiguration Include="DebugGame|x64">
+      <Configuration>DebugGame</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Win64_arm64_DebugGame|x64">
@@ -17,8 +17,8 @@
       <Configuration>Win64_arm64ec_DebugGame</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Win64_x64_DebugGame_Editor|x64">
-      <Configuration>Win64_x64_DebugGame_Editor</Configuration>
+    <ProjectConfiguration Include="DebugGame_Editor|x64">
+      <Configuration>DebugGame_Editor</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Win64_arm64_DebugGame_Editor|x64">
@@ -29,8 +29,8 @@
       <Configuration>Win64_arm64ec_DebugGame_Editor</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Win64_x64_Development|x64">
-      <Configuration>Win64_x64_Development</Configuration>
+    <ProjectConfiguration Include="Development|x64">
+      <Configuration>Development</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Win64_arm64_Development|x64">
@@ -41,8 +41,8 @@
       <Configuration>Win64_arm64ec_Development</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Win64_x64_Development_Editor|x64">
-      <Configuration>Win64_x64_Development_Editor</Configuration>
+    <ProjectConfiguration Include="Development_Editor|x64">
+      <Configuration>Development_Editor</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Win64_arm64_Development_Editor|x64">
@@ -53,8 +53,8 @@
       <Configuration>Win64_arm64ec_Development_Editor</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Win64_x64_Shipping|x64">
-      <Configuration>Win64_x64_Shipping</Configuration>
+    <ProjectConfiguration Include="Shipping|x64">
+      <Configuration>Shipping</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Win64_arm64_Shipping|x64">
@@ -80,13 +80,13 @@
     <NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
     <AdditionalOptions>/std:c++20  /DSAL_NO_ATTRIBUTE_DECLARATIONS=1 /permissive- /Zc:strictStrings- /Zc:__cplusplus</AdditionalOptions>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_x64_DebugGame|x64'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame|x64'">
     <NMakeBuildCommandLine>$(BuildBatchScript) StackAndShooter Win64 DebugGame -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>$(RebuildBatchScript) StackAndShooter Win64 DebugGame -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>$(CleanBatchScript) StackAndShooter Win64 DebugGame -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeCleanCommandLine>
     <NMakeOutput>..\..\Binaries\Win64\StackAndShooter-Win64-DebugGame.exe</NMakeOutput>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_x64_DebugGame|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame|x64'">
     <NMakeCompile>
       <NMakeCompileFileCommandLine>$(BuildBatchScript) StackAndShooter Win64 DebugGame -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
     </NMakeCompile>
@@ -113,13 +113,13 @@
       <NMakeCompileFileCommandLine>$(BuildBatchScript) StackAndShooter Win64 DebugGame -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
     </NMakeCompile>
   </ItemDefinitionGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_x64_DebugGame_Editor|x64'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'">
     <NMakeBuildCommandLine>$(BuildBatchScript) StackAndShooterEditor Win64 DebugGame -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>$(RebuildBatchScript) StackAndShooterEditor Win64 DebugGame -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>$(CleanBatchScript) StackAndShooterEditor Win64 DebugGame -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeCleanCommandLine>
     <NMakeOutput>C:\Program Files\Epic Games\UE_5.6\Engine\Binaries\Win64\UnrealEditor-Win64-DebugGame.exe</NMakeOutput>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_x64_DebugGame_Editor|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'">
     <NMakeCompile>
       <NMakeCompileFileCommandLine>$(BuildBatchScript) StackAndShooterEditor Win64 DebugGame -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
     </NMakeCompile>
@@ -146,13 +146,13 @@
       <NMakeCompileFileCommandLine>$(BuildBatchScript) StackAndShooterEditor Win64 DebugGame -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
     </NMakeCompile>
   </ItemDefinitionGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_x64_Development|x64'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
     <NMakeBuildCommandLine>$(BuildBatchScript) StackAndShooter Win64 Development -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>$(RebuildBatchScript) StackAndShooter Win64 Development -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>$(CleanBatchScript) StackAndShooter Win64 Development -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeCleanCommandLine>
     <NMakeOutput>..\..\Binaries\Win64\StackAndShooter.exe</NMakeOutput>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_x64_Development|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
     <NMakeCompile>
       <NMakeCompileFileCommandLine>$(BuildBatchScript) StackAndShooter Win64 Development -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
     </NMakeCompile>
@@ -179,13 +179,13 @@
       <NMakeCompileFileCommandLine>$(BuildBatchScript) StackAndShooter Win64 Development -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
     </NMakeCompile>
   </ItemDefinitionGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_x64_Development_Editor|x64'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'">
     <NMakeBuildCommandLine>$(BuildBatchScript) StackAndShooterEditor Win64 Development -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>$(RebuildBatchScript) StackAndShooterEditor Win64 Development -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>$(CleanBatchScript) StackAndShooterEditor Win64 Development -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeCleanCommandLine>
     <NMakeOutput>C:\Program Files\Epic Games\UE_5.6\Engine\Binaries\Win64\UnrealEditor.exe</NMakeOutput>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_x64_Development_Editor|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'">
     <NMakeCompile>
       <NMakeCompileFileCommandLine>$(BuildBatchScript) StackAndShooterEditor Win64 Development -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
     </NMakeCompile>
@@ -212,13 +212,13 @@
       <NMakeCompileFileCommandLine>$(BuildBatchScript) StackAndShooterEditor Win64 Development -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
     </NMakeCompile>
   </ItemDefinitionGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_x64_Shipping|x64'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|x64'">
     <NMakeBuildCommandLine>$(BuildBatchScript) StackAndShooter Win64 Shipping -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>$(RebuildBatchScript) StackAndShooter Win64 Shipping -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>$(CleanBatchScript) StackAndShooter Win64 Shipping -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeCleanCommandLine>
     <NMakeOutput>..\..\Binaries\Win64\StackAndShooter-Win64-Shipping.exe</NMakeOutput>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_x64_Shipping|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|x64'">
     <NMakeCompile>
       <NMakeCompileFileCommandLine>$(BuildBatchScript) StackAndShooter Win64 Shipping -Project="$(SolutionDir)StackAndShooter.uproject" -WaitMutex -FromMsBuild -architecture=x64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
     </NMakeCompile>

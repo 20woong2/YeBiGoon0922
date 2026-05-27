@@ -20,6 +20,49 @@ STACKANDSHOOTER_API UClass* Z_Construct_UClass_UShooterUI_NoRegister();
 UPackage* Z_Construct_UPackage__Script_StackAndShooter();
 // ********** End Cross Module References **********************************************************
 
+// ********** Begin Class AShooterGameMode Function IncrementTeamScore *****************************
+struct Z_Construct_UFunction_AShooterGameMode_IncrementTeamScore_Statics
+{
+	struct ShooterGameMode_eventIncrementTeamScore_Parms
+	{
+		uint8 TeamByte;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Score" },
+		{ "ModuleRelativePath", "Variant_Shooter/ShooterGameMode.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_TeamByte;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_AShooterGameMode_IncrementTeamScore_Statics::NewProp_TeamByte = { "TeamByte", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ShooterGameMode_eventIncrementTeamScore_Parms, TeamByte), nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AShooterGameMode_IncrementTeamScore_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AShooterGameMode_IncrementTeamScore_Statics::NewProp_TeamByte,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterGameMode_IncrementTeamScore_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AShooterGameMode_IncrementTeamScore_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AShooterGameMode, nullptr, "IncrementTeamScore", Z_Construct_UFunction_AShooterGameMode_IncrementTeamScore_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterGameMode_IncrementTeamScore_Statics::PropPointers), sizeof(Z_Construct_UFunction_AShooterGameMode_IncrementTeamScore_Statics::ShooterGameMode_eventIncrementTeamScore_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterGameMode_IncrementTeamScore_Statics::Function_MetaDataParams), Z_Construct_UFunction_AShooterGameMode_IncrementTeamScore_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_AShooterGameMode_IncrementTeamScore_Statics::ShooterGameMode_eventIncrementTeamScore_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_AShooterGameMode_IncrementTeamScore()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShooterGameMode_IncrementTeamScore_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AShooterGameMode::execIncrementTeamScore)
+{
+	P_GET_PROPERTY(FByteProperty,Z_Param_TeamByte);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->IncrementTeamScore(Z_Param_TeamByte);
+	P_NATIVE_END;
+}
+// ********** End Class AShooterGameMode Function IncrementTeamScore *******************************
+
 // ********** Begin Class AShooterGameMode Function OnScoreIncremented *****************************
 struct ShooterGameMode_eventOnScoreIncremented_Parms
 {
@@ -71,6 +114,11 @@ UFunction* Z_Construct_UFunction_AShooterGameMode_OnScoreIncremented()
 // ********** Begin Class AShooterGameMode *********************************************************
 void AShooterGameMode::StaticRegisterNativesAShooterGameMode()
 {
+	UClass* Class = AShooterGameMode::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IncrementTeamScore", &AShooterGameMode::execIncrementTeamScore },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 FClassRegistrationInfo Z_Registration_Info_UClass_AShooterGameMode;
 UClass* AShooterGameMode::GetPrivateStaticClass()
@@ -131,6 +179,7 @@ struct Z_Construct_UClass_AShooterGameMode_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_AShooterGameMode_IncrementTeamScore, "IncrementTeamScore" }, // 239007355
 		{ &Z_Construct_UFunction_AShooterGameMode_OnScoreIncremented, "OnScoreIncremented" }, // 3326915109
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -178,14 +227,14 @@ AShooterGameMode::~AShooterGameMode() {}
 // ********** End Class AShooterGameMode ***********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterGameMode_h__Script_StackAndShooter_Statics
+struct Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterGameMode_h__Script_StackAndShooter_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterGameMode, AShooterGameMode::StaticClass, TEXT("AShooterGameMode"), &Z_Registration_Info_UClass_AShooterGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterGameMode), 579633330U) },
+		{ Z_Construct_UClass_AShooterGameMode, AShooterGameMode::StaticClass, TEXT("AShooterGameMode"), &Z_Registration_Info_UClass_AShooterGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterGameMode), 2669002135U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterGameMode_h__Script_StackAndShooter_866605578(TEXT("/Script/StackAndShooter"),
-	Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterGameMode_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterGameMode_h__Script_StackAndShooter_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterGameMode_h__Script_StackAndShooter_31403529(TEXT("/Script/StackAndShooter"),
+	Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterGameMode_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_user_Documents_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterGameMode_h__Script_StackAndShooter_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

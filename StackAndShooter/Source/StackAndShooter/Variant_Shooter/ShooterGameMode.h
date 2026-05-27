@@ -37,7 +37,7 @@ protected:
 
 public:
 
-	/** Increases the score for the given team */
+	UFUNCTION(BlueprintCallable, Category = "Score")
 	void IncrementTeamScore(uint8 TeamByte);
 
 	UFUNCTION(BlueprintImplementableEvent, Category="Score")
