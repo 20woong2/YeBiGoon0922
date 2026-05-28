@@ -2,6 +2,7 @@
 	"RemapUnityFiles": 
 	{
 		"Module.StackAndShooter.cpp.obj": [
+			"PerModuleInline.gen.cpp.obj",
 			"StackAndShooter.cpp.obj",
 			"StackAndShooterCameraManager.cpp.obj",
 			"StackAndShooterCharacter.cpp.obj",
@@ -45,8 +46,7 @@
 			"StackAndShooterCameraManager.gen.cpp.obj",
 			"StackAndShooterCharacter.gen.cpp.obj",
 			"StackAndShooterGameMode.gen.cpp.obj",
-			"StackAndShooterPlayerController.gen.cpp.obj",
-			"PerModuleInline.gen.cpp.obj"
+			"StackAndShooterPlayerController.gen.cpp.obj"
 		]
 	}
 }
