@@ -400,7 +400,41 @@ void AShooterCharacter::FellOutOfWorld(const class UDamageType& dmgType)
 	if (CurrentHP > 0.0f)
 	{
 		// 기억해둔 시작 위치로 텔레포트
-		SetActorLocation(InitialSpawnLoc);
+		// 3. 맵에 있는 PlayerStart(시작 지점)를 찾아서 그곳으로 텔레포트 시킵니다.
+		APlayerController* PC = Cast<APlayerController>(GetController());
+
+		// 이 캐릭터가 1P인지 2P인지 번호를 확인합니다. (1P는 0, 2P는 1)
+		int32 PlayerIndex = UGameplayStatics::GetPlayerControllerID(PC);
+
+		// 1P면 "P1", 2P면 "P2" 라는 명찰을 타겟으로 정합니다.
+		FName TargetTag = (PlayerIndex == 0) ? FName("P1") : FName("P2");
+
+		TArray<AActor*> PlayerStarts;
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), APlayerStart::StaticClass(), PlayerStarts);
+
+		bool bFoundSpot = false;
+
+		for (AActor* StartSpot : PlayerStarts)
+		{
+			// 스폰 지점의 명찰(Tag)이 내 타겟 명찰과 똑같은지 확인합니다!
+			if (StartSpot->ActorHasTag(TargetTag))
+			{
+				FVector SafeLocation = StartSpot->GetActorLocation();
+				SafeLocation.Z += 100.0f; // 바닥 끼임 방지를 위해 살짝 띄움
+
+				SetActorLocation(SafeLocation);
+				bFoundSpot = true;
+				break; // 내 자리를 찾았으니 탐색을 즉시 종료합니다!
+			}
+		}
+
+		// 만약 실수로 맵에 명찰을 안 달아뒀을 경우를 대비한 안전장치
+		if (!bFoundSpot)
+		{
+			FVector FallbackLocation = GetActorLocation();
+			FallbackLocation.Z += 1000.0f;
+			SetActorLocation(FallbackLocation);
+		}
 	}
 }
 
