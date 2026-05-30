@@ -17,10 +17,6 @@ void AShooterGameMode::BeginPlay()
 
 void AShooterGameMode::IncrementTeamScore(uint8 TeamByte)
 {
-	// 🚨 거짓말 탐지기 가동! 도대체 어떤 놈이 날 부르고 있는가?!
-	UE_LOG(LogTemp, Warning, TEXT("====================================="));
-	UE_LOG(LogTemp, Warning, TEXT("[점수 함수 호출됨!] 방금 죽었다고 신고한 TeamByte 번호: %d"), TeamByte);
-
 		// 죽은 팀이 0번이면 승자는 1번, 죽은 팀이 1번이면 승자는 0번
 		uint8 WinnerTeam = (TeamByte == 0) ? 1 : 0;
 
