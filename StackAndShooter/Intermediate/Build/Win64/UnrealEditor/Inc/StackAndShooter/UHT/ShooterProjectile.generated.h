@@ -19,10 +19,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct FHitResult;
 
 // ********** Begin Class AShooterProjectile *******************************************************
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_20_CALLBACK_WRAPPERS
+#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_20_CALLBACK_WRAPPERS
 STACKANDSHOOTER_API UClass* Z_Construct_UClass_AShooterProjectile_NoRegister();
 
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_20_INCLASS_NO_PURE_DECLS \
+#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAShooterProjectile(); \
 	friend struct Z_Construct_UClass_AShooterProjectile_Statics; \
@@ -33,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(AShooterProjectile)
 
 
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_20_ENHANCED_CONSTRUCTORS \
+#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_20_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AShooterProjectile(AShooterProjectile&&) = delete; \
 	AShooterProjectile(const AShooterProjectile&) = delete; \
@@ -43,13 +43,13 @@ public: \
 	NO_API virtual ~AShooterProjectile();
 
 
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_17_PROLOG
-#define FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_20_GENERATED_BODY \
+#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_17_PROLOG
+#define FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_20_CALLBACK_WRAPPERS \
-	FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_20_INCLASS_NO_PURE_DECLS \
-	FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_20_ENHANCED_CONSTRUCTORS \
+	FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_20_CALLBACK_WRAPPERS \
+	FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_20_INCLASS_NO_PURE_DECLS \
+	FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -59,6 +59,6 @@ class AShooterProjectile;
 // ********** End Class AShooterProjectile *********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h
+#define CURRENT_FILE_ID FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_Weapons_ShooterProjectile_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -103,6 +103,15 @@ public:
 	/** Constructor */
 	AShooterCharacter();
 
+public:
+	// 엔진의 기본 시점 회전 함수를 가로채기 위한 오버라이드
+	virtual void AddControllerYawInput(float Val) override;
+	virtual void AddControllerPitchInput(float Val) override;
+
+	// 블루프린트에서 '최종 감도'를 계산해서 넘겨받을 함수
+	UFUNCTION(BlueprintImplementableEvent, Category = "AimAssist")
+	float GetCustomLookMultiplier();
+
 protected:
 
 	/** Gameplay initialization */

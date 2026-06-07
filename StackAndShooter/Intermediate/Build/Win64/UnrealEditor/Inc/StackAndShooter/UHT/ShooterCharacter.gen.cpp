@@ -292,6 +292,61 @@ DEFINE_FUNCTION(AShooterCharacter::execDoSwitchWeapon)
 }
 // ********** End Class AShooterCharacter Function DoSwitchWeapon **********************************
 
+// ********** Begin Class AShooterCharacter Function GetCustomLookMultiplier ***********************
+struct ShooterCharacter_eventGetCustomLookMultiplier_Parms
+{
+	float ReturnValue;
+
+	/** Constructor, initializes return property only **/
+	ShooterCharacter_eventGetCustomLookMultiplier_Parms()
+		: ReturnValue(0)
+	{
+	}
+};
+static FName NAME_AShooterCharacter_GetCustomLookMultiplier = FName(TEXT("GetCustomLookMultiplier"));
+float AShooterCharacter::GetCustomLookMultiplier()
+{
+	ShooterCharacter_eventGetCustomLookMultiplier_Parms Parms;
+	UFunction* Func = FindFunctionChecked(NAME_AShooterCharacter_GetCustomLookMultiplier);
+	ProcessEvent(Func,&Parms);
+	return Parms.ReturnValue;
+}
+struct Z_Construct_UFunction_AShooterCharacter_GetCustomLookMultiplier_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "AimAssist" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xeb\xb8\x94\xeb\xa3\xa8\xed\x94\x84\xeb\xa6\xb0\xed\x8a\xb8\xec\x97\x90\xec\x84\x9c '\xec\xb5\x9c\xec\xa2\x85 \xea\xb0\x90\xeb\x8f\x84'\xeb\xa5\xbc \xea\xb3\x84\xec\x82\xb0\xed\x95\xb4\xec\x84\x9c \xeb\x84\x98\xea\xb2\xa8\xeb\xb0\x9b\xec\x9d\x84 \xed\x95\xa8\xec\x88\x98\n" },
+#endif
+		{ "ModuleRelativePath", "Variant_Shooter/ShooterCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xeb\xb8\x94\xeb\xa3\xa8\xed\x94\x84\xeb\xa6\xb0\xed\x8a\xb8\xec\x97\x90\xec\x84\x9c '\xec\xb5\x9c\xec\xa2\x85 \xea\xb0\x90\xeb\x8f\x84'\xeb\xa5\xbc \xea\xb3\x84\xec\x82\xb0\xed\x95\xb4\xec\x84\x9c \xeb\x84\x98\xea\xb2\xa8\xeb\xb0\x9b\xec\x9d\x84 \xed\x95\xa8\xec\x88\x98" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AShooterCharacter_GetCustomLookMultiplier_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ShooterCharacter_eventGetCustomLookMultiplier_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AShooterCharacter_GetCustomLookMultiplier_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AShooterCharacter_GetCustomLookMultiplier_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_GetCustomLookMultiplier_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AShooterCharacter_GetCustomLookMultiplier_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AShooterCharacter, nullptr, "GetCustomLookMultiplier", Z_Construct_UFunction_AShooterCharacter_GetCustomLookMultiplier_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_GetCustomLookMultiplier_Statics::PropPointers), sizeof(ShooterCharacter_eventGetCustomLookMultiplier_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_GetCustomLookMultiplier_Statics::Function_MetaDataParams), Z_Construct_UFunction_AShooterCharacter_GetCustomLookMultiplier_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(ShooterCharacter_eventGetCustomLookMultiplier_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_AShooterCharacter_GetCustomLookMultiplier()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShooterCharacter_GetCustomLookMultiplier_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// ********** End Class AShooterCharacter Function GetCustomLookMultiplier *************************
+
 // ********** Begin Class AShooterCharacter Function Heal ******************************************
 struct Z_Construct_UFunction_AShooterCharacter_Heal_Statics
 {
@@ -673,6 +728,7 @@ struct Z_Construct_UClass_AShooterCharacter_Statics
 		{ &Z_Construct_UFunction_AShooterCharacter_DoStartFiring, "DoStartFiring" }, // 3772532036
 		{ &Z_Construct_UFunction_AShooterCharacter_DoStopFiring, "DoStopFiring" }, // 1034790919
 		{ &Z_Construct_UFunction_AShooterCharacter_DoSwitchWeapon, "DoSwitchWeapon" }, // 2695605878
+		{ &Z_Construct_UFunction_AShooterCharacter_GetCustomLookMultiplier, "GetCustomLookMultiplier" }, // 3377590069
 		{ &Z_Construct_UFunction_AShooterCharacter_Heal, "Heal" }, // 34580019
 		{ &Z_Construct_UFunction_AShooterCharacter_OnRespawn, "OnRespawn" }, // 161637164
 		{ &Z_Construct_UFunction_AShooterCharacter_ResetHP, "ResetHP" }, // 299512639
@@ -750,14 +806,14 @@ AShooterCharacter::~AShooterCharacter() {}
 // ********** End Class AShooterCharacter **********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics
+struct Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 969389184U) },
+		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 214993147U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_1718487746(TEXT("/Script/StackAndShooter"),
-	Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_YeBiGoon0922_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_799395636(TEXT("/Script/StackAndShooter"),
+	Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE_Projects_StackAndShooter_Source_StackAndShooter_Variant_Shooter_ShooterCharacter_h__Script_StackAndShooter_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

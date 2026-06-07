@@ -77,13 +77,21 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 
 float AShooterCharacter::TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
-	// 1. 죽었는지 확인 (여기서 걸러내야 Super가 헛발질을 안 합니다)
+	// 1. 죽었는지 확인
 	if (CurrentHP <= 0.0f)
 	{
 		return 0.0f;
 	}
 
-	// 2. 데미지 뻥튀기 계산 (먼저 데미지 수치 자체를 수정!)
+	// === [여기에 이 한 줄을 꼭 추가해 주세요!] ===
+	// 1-2. 무적 상태(CanBeDamaged가 false)인지 확인
+	if (!CanBeDamaged())
+	{
+		return 0.0f;
+	}
+	// ===========================================
+
+	// 2. 데미지 뻥튀기 계산
 	if (EventInstigator && EventInstigator->GetPawn())
 	{
 		if (AShooterCharacter* AttackerChar = Cast<AShooterCharacter>(EventInstigator->GetPawn()))
@@ -91,6 +99,7 @@ float AShooterCharacter::TakeDamage(float Damage, struct FDamageEvent const& Dam
 			Damage = Damage * AttackerChar->DamageMultiplier;
 		}
 	}
+
 	// 4. 엔진이 확정한 최종 데미지로 내 체력 깎기
 	CurrentHP -= Damage;
 	// 3. Super 호출 (수정된 Damage를 엔진에 넘겨서 제대로 소문내기!)
@@ -284,38 +293,91 @@ AShooterWeapon* AShooterCharacter::FindWeaponOfType(TSubclassOf<AShooterWeapon> 
 
 void AShooterCharacter::Die()
 {
-	// deactivate the weapon
+	// 1. 무기 비활성화 및 화면에서 숨기기 (허공에 총이 떠있는 버그 방지)
 	if (IsValid(CurrentWeapon))
 	{
 		CurrentWeapon->DeactivateWeapon();
+		CurrentWeapon->SetActorHiddenInGame(true);
 	}
 
-	// stop character movement
+	// 2. 캡슐의 움직임을 멈추고 허공에 고정시킵니다.
 	GetCharacterMovement()->StopMovementImmediately();
+	GetCharacterMovement()->DisableMovement();
 
-	// disable controls
+	if (GetMesh())
+	{
+		// 3. 애니메이션 강제 종료
+		GetMesh()->bPauseAnims = true;
+
+		// 4. [가장 중요] 캐릭터 몸에 붙은 모든 파츠(옷, 신발 등)를 찾아냅니다.
+		TArray<USkeletalMeshComponent*> SkeletalMeshes;
+		GetComponents<USkeletalMeshComponent>(SkeletalMeshes);
+
+		for (USkeletalMeshComponent* SkelMesh : SkeletalMeshes)
+		{
+			if (!SkelMesh) continue;
+
+			// 1인칭 팔(보통 화면에만 보임)은 데스 카메라를 가리지 않게 투명하게 숨깁니다.
+			if (SkelMesh == GetFirstPersonMesh())
+			{
+				SkelMesh->SetHiddenInGame(true);
+				continue;
+			}
+
+			// 상의, 하의 파츠들을 캡슐에서 떼어내 '추락할 메인 몸통(GetMesh)' 산하로 단단히 묶습니다.
+			if (SkelMesh != GetMesh())
+			{
+				SkelMesh->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepWorldTransform);
+			}
+		}
+
+		// 5. 파츠들이 모두 결합된 메인 몸통을 캡슐에서 분리하고 물리(랙돌)를 켭니다.
+		GetMesh()->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+		GetMesh()->SetCollisionProfileName(TEXT("Ragdoll"));
+		GetMesh()->SetSimulatePhysics(true);
+	}
+
+	// 컨트롤 비활성화 및 UI 리셋
 	DisableInput(nullptr);
-
-	// reset the bullet counter UI
 	OnBulletCountUpdated.Broadcast(0, 0);
 
-	// call the BP handler
+	// 블루프린트 이벤트 호출
 	BP_OnDeath();
 
-	// schedule character respawn
+	// 리스폰 타이머 시작
 	GetWorld()->GetTimerManager().SetTimer(RespawnTimer, this, &AShooterCharacter::OnRespawn, RespawnTime, false);
 }
 
 void AShooterCharacter::OnRespawn()
 {
 	BP_OnRespawn();
-	// 1. 입력과 움직임을 다시 활성화합니다. (Die에서 막았던 것 복구)
+	// 1. 입력과 움직임 활성화
 	EnableInput(Cast<APlayerController>(GetController()));
 	GetCharacterMovement()->SetMovementMode(MOVE_Walking);
 
-	// 2. 체력(Health)을 다시 최대치로 채워줍니다.
-	// (🚨주의: 유저님의 실제 체력 변수명과 최대 체력 변수명으로 수정해 주세요!)
+	// 2. 체력 복구
 	ResetHP();
+
+	// === [부활 시 몸통 및 카메라 재조립] ===
+	if (GetMesh())
+	{
+		// 물리 끄고 애니메이션 다시 켜기
+		GetMesh()->SetSimulatePhysics(false);
+		GetMesh()->SetCollisionProfileName(TEXT("CharacterMesh"));
+		GetMesh()->bPauseAnims = false;
+
+		// 몸통을 다시 투명 캡슐(루트)에 붙이기
+		GetMesh()->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+
+		// 원래 각도와 위치로 리셋 (유저님 세팅값)
+		GetMesh()->SetRelativeLocationAndRotation(FVector(0.0f, 0.0f, -90.0f), FRotator(0.0f, -70.0f, 0.0f));
+	}
+
+	// 숨겼던 1인칭 팔 원상복구
+	if (GetFirstPersonMesh())
+	{
+		GetFirstPersonMesh()->SetHiddenInGame(false);
+	}
 
 	// 3. 맵에 있는 PlayerStart(시작 지점)를 찾아서 그곳으로 텔레포트 시킵니다.
 	APlayerController* PC = Cast<APlayerController>(GetController());
@@ -394,7 +456,7 @@ void AShooterCharacter::FellOutOfWorld(const class UDamageType& dmgType)
 	// 원래 있던 Super::FellOutOfWorld(dmgType); 를 절대 적지 않습니다. (엔진의 즉사 기능을 여기서 끊어버립니다)
 
 	//100 데미지 입히기
-	TakeDamage(100.0f, FDamageEvent(), nullptr, nullptr);
+	TakeDamage(50.0f, FDamageEvent(), nullptr, nullptr);
 
 	// 만약 데미지를 받고도 피가 남아서 살아있다면
 	if (CurrentHP > 0.0f)
@@ -445,4 +507,30 @@ void AShooterCharacter::ForceUpdateWeaponHUD()
 	{
 		OnBulletCountUpdated.Broadcast(CurrentWeapon->GetMagazineSize(), CurrentWeapon->GetBulletCount());
 	}
+}
+
+void AShooterCharacter::AddControllerYawInput(float Val)
+{
+	// 블루프린트에서 계산한 최종 감도 배율을 가져옵니다.
+	float Multiplier = GetCustomLookMultiplier();
+
+	// 블루프린트에 구현이 안 되어 있거나 실수로 0이 반환되면 멈추는 것을 방지하는 안전장치
+	if (Multiplier <= 0.0f)
+	{
+		Multiplier = 1.0f;
+	}
+
+	// 입력값(Val)에 최종 감도를 곱해서 진짜 회전 로직(Super)으로 넘겨줍니다!
+	Super::AddControllerYawInput(Val * Multiplier);
+}
+
+void AShooterCharacter::AddControllerPitchInput(float Val)
+{
+	float Multiplier = GetCustomLookMultiplier();
+	if (Multiplier <= 0.0f)
+	{
+		Multiplier = 1.0f;
+	}
+
+	Super::AddControllerPitchInput(Val * Multiplier);
 }

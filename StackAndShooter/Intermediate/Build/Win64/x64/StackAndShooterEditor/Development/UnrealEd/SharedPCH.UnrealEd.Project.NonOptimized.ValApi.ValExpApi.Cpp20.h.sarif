@@ -10,7 +10,7 @@
                         "text": "'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -35,7 +35,7 @@
                         "text": "'UStruct::ActivateTrackingPropertyValueFlag': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -60,7 +60,7 @@
                         "text": "'UStruct::IsTrackingPropertyValueFlag': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -85,7 +85,7 @@
                         "text": "'UStruct::HasPropertyValueFlag': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -110,7 +110,7 @@
                         "text": "'UStruct::SetPropertyValueFlag': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -135,7 +135,7 @@
                         "text": "'UStruct::ResetPropertyValueFlags': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -160,7 +160,7 @@
                         "text": "'UStruct::SerializePropertyValueFlags': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -185,7 +185,7 @@
                         "text": "'FArchiveState::GetSerializeContext': GetSerializeContext is not supported. Use FUObjectThreadContext::Get().GetSerializeContext(). - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -210,7 +210,7 @@
                         "text": "'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -235,7 +235,7 @@
                         "text": "'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -260,7 +260,7 @@
                         "text": "'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -285,7 +285,7 @@
                         "text": "'UObjectBaseUtility::GetVersePath': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -310,7 +310,7 @@
                         "text": "'UClass::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -335,7 +335,7 @@
                         "text": "'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -360,7 +360,7 @@
                         "text": "'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -385,7 +385,7 @@
                         "text": "'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -410,7 +410,7 @@
                         "text": "'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -435,7 +435,7 @@
                         "text": "'UAnimationAsset::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -460,7 +460,7 @@
                         "text": "'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -485,7 +485,7 @@
                         "text": "'ICompressedAnimData::SerializeCompressedData': SerializeCompressedData now accepts the DataOwner as an argument - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -510,7 +510,7 @@
                         "text": "'UAnimSequenceBase::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -535,7 +535,7 @@
                         "text": "'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -560,7 +560,7 @@
                         "text": "'USkinnedMeshComponent::UpdateSlaveComponent': This method has been deprecated. Please use UpdateFollowerComponent instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -585,7 +585,7 @@
                         "text": "'USkinnedMeshComponent::SetSkeletalMesh': Use USkeletalMeshComponent::SetSkeletalMesh() or SetSkinnedAssetAndUpdate() instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -610,7 +610,7 @@
                         "text": "'FGraphActionListBuilderBase::AddAction': Overriding the schema action category is no longer supported, set the category via CosmeticUpdateRootCategory or CosmeticUpdateCategory - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -635,7 +635,7 @@
                         "text": "'FGraphActionListBuilderBase::AddActionList': Collections of Action lists were ambiguous and unused - make a compound FEdGraphSchemaAction and Add it - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -660,7 +660,7 @@
                         "text": "'UNetConnection::IsNetReady': Replaced with a version that doesn't have a saturate option. Call Saturate() directly if passing true before. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -685,7 +685,7 @@
                         "text": "'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -710,7 +710,7 @@
                         "text": "'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -735,7 +735,7 @@
                         "text": "'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -760,7 +760,7 @@
                         "text": "'USkinnedAsset::GetLODInfoArray': Use GetLODInfo and GetLODNum instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -785,7 +785,7 @@
                         "text": "'USkinnedAsset::GetLODInfoArray': Use GetLODInfo and GetLODNum instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -810,7 +810,7 @@
                         "text": "'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -835,7 +835,7 @@
                         "text": "'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -860,7 +860,7 @@
                         "text": "'UTexture::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -885,7 +885,7 @@
                         "text": "'UMaterialExpression::GetInputsView': Use FExpressionInputIterator instead or GetInput() directly. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -910,7 +910,7 @@
                         "text": "'FMaterial::ShouldInlineShaderCode': ShouldInlineShaderCode is no longer used when packaging shader maps. If you rely on this for some reason please reach out to the UE rendering team. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -935,7 +935,7 @@
                         "text": "'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -960,7 +960,7 @@
                         "text": "'Chaos::FImplicitObject::GetRadius': Please use GetRadiusf instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -1047,7 +1047,7 @@
                         "text": "'Chaos::FImplicitObject::GetMargin': Please use GetMarginf instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -1113,7 +1113,7 @@
                         "text": "'Chaos::FImplicitObject::GetRadius': Please use GetRadiusf instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
@@ -1138,7 +1138,7 @@
                         "text": "'IAssetEditorInstance::CloseWindow': Use CloseWindow that takes in an EAssetEditorCloseReason instead - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Unreal/YeBiGoon0922/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
+                        "uri": "file:///C:/UE_Projects/StackAndShooter/Intermediate/Build/Win64/x64/StackAndShooterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.cpp"
                     },
                     "locations": [
                         {
